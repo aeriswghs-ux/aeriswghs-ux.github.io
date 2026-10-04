@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+ <title>Illustrative CubeSat concept</title><desc>A conceptual small satellite with a central bus, a payload face, and two solar-panel wings. No mission configuration or dimensions are established.</desc>
+ <g fill="none" stroke="#596960" stroke-width="1"><ellipse cx="402" cy="328" rx="350" ry="138" transform="rotate(-17 402 328)" stroke-dasharray="4 10"/><path d="M401 77V531M76 305H729" stroke-dasharray="2 12"/></g>
+ <g stroke="#9baeac" stroke-width="2">
+  <path d="M79 315 220 232 332 285 190 372Z" fill="#284a4b"/>
+  <path d="M467 295 609 208 723 262 579 350Z" fill="#284a4b"/>
+  <g fill="none" stroke="#6b9696" stroke-width="1"><path d="M114 294 226 350M149 273 262 329M184 252 297 307M116 333 257 249M153 353 294 268M502 273 615 328M537 252 651 306M574 230 686 284M506 315 648 229M543 333 685 247"/></g>
+ </g>
+ <g stroke="#d6cfaf" stroke-width="2"><path d="M281 207 413 130 534 205 400 286Z" fill="#d6bd7c"/><path d="M281 207 400 286 400 433 281 355Z" fill="#aa925d"/><path d="M400 286 534 205 534 351 400 433Z" fill="#7f754f"/></g>
+ <g fill="none" stroke="#e5e5d7" stroke-width="8"><path d="M281 207 413 130 534 205 534 351 400 433 281 355Z"/><path d="M281 207 400 286 534 205M400 286V433"/></g>
+ <path d="M311 244 371 283 371 348 311 309Z" fill="#17241f" stroke="#e5e5d7" stroke-width="3"/>
+ <ellipse cx="341" cy="296" rx="16" ry="24" transform="rotate(-28 341 296)" fill="#456867" stroke="#b7c5ba" stroke-width="2"/>
+ <g stroke="#f2efe6" stroke-width="2" fill="none"><path d="M413 135 416 62M416 62 430 53M534 349 580 404"/></g>
+ <g fill="#f2efe6"><circle cx="413" cy="130" r="5"/><circle cx="534" cy="205" r="5"/><circle cx="281" cy="207" r="5"/><circle cx="400" cy="286" r="5"/><circle cx="400" cy="433" r="5"/></g>
+</svg>

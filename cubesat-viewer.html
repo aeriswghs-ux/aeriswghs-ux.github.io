@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CubeSat concept explorer</title>
+  <link rel="stylesheet" href="fonts.css"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="cubesat.css">
+  <script src="https://aframe.io/releases/1.8.0/aframe.min.js" defer></script>
+  <script src="cubesat.js" defer></script>
+</head>
+<body class="viewer-body">
+  <main class="viewer-main">
+    <h1>Concept anatomy</h1>
+    <p class="viewer-note">Illustrative body, solar panels and antenna. No mission or hardware design selected.</p>
+    <div class="scene-wrap">
+      <img id="scene-fallback" src="assets/cubesat-concept.svg" width="800" height="600" alt="Concept satellite: central body, two solar-panel wings, and antenna.">
+      <a-scene embedded hidden vr-mode-ui="enabled: false" xr-mode-ui="enabled: false" loading-screen="enabled: false" renderer="antialias: true; colorManagement: true" background="color: #17241f">
+        <a-entity light="type: ambient; intensity: 1.5"></a-entity>
+        <a-entity light="type: directional; intensity: 2" position="2 4 4"></a-entity>
+        <a-entity id="satellite" rotation="18 -28 -10">
+          <a-box width="1.2" height="1.4" depth="1.2" color="#b39861" material="metalness: .35; roughness: .6"></a-box>
+          <a-box position="-.57 0 .62" width=".08" height="1.52" depth=".08" color="#f2efe6"></a-box>
+          <a-box position=".57 0 .62" width=".08" height="1.52" depth=".08" color="#f2efe6"></a-box>
+          <a-box position="0 .7 .62" width="1.22" height=".08" depth=".08" color="#f2efe6"></a-box>
+          <a-box position="0 -.7 .62" width="1.22" height=".08" depth=".08" color="#f2efe6"></a-box>
+          <a-entity id="left-panel" position="-1.45 0 0"><a-box width="1.6" height="1.1" depth=".05" color="#527d7b"></a-box><a-box width=".025" height="1.1" depth=".065" color="#f2efe6"></a-box><a-box width="1.6" height=".025" depth=".065" color="#f2efe6"></a-box></a-entity>
+          <a-entity id="right-panel" position="1.45 0 0"><a-box width="1.6" height="1.1" depth=".05" color="#527d7b"></a-box><a-box width=".025" height="1.1" depth=".065" color="#f2efe6"></a-box><a-box width="1.6" height=".025" depth=".065" color="#f2efe6"></a-box></a-entity>
+          <a-cylinder position="0 1.08 0" radius=".015" height=".8" color="#f2efe6"></a-cylinder>
+        </a-entity>
+        <a-entity camera="fov: 45" position="0 0 6.5" look-controls="enabled: false" wasd-controls="enabled: false"></a-entity>
+      </a-scene>
+    </div>
+    <div class="scene-controls" hidden><button class="outline-button" id="rotate-left" aria-label="Rotate satellite left">← Rotate</button><button class="outline-button" id="rotate-right" aria-label="Rotate satellite right">Rotate →</button><button class="outline-button" id="reset-scene">Reset</button></div>
+    <p id="scene-status" class="viewer-note" role="status">Loading the optional 3D view. The illustration remains available if it cannot load.</p>
+  </main>
+</body>
+</html>

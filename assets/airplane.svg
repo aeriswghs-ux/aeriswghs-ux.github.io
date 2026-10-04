@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="320" viewBox="0 0 520 320">
+  <title>Illustrated research aircraft</title><desc>An original stylized airplane used for the portfolio opening, not a model of an aircraft built by the researchers.</desc>
+  <path d="M338 146 229 24 171 24 222 156Z" fill="#b7c5ba" stroke="#f2efe6" stroke-width="1.5"/>
+  <path d="M337 174 229 295 171 295 222 166Z" fill="#e2e6dc" stroke="#f2efe6" stroke-width="1.5"/>
+  <path d="M153 154 99 86 61 86 88 162Z" fill="#b7c5ba"/>
+  <path d="M153 170 99 235 61 235 88 164Z" fill="#d8ded3"/>
+  <path d="M58 161 199 148 334 137Q425 128 481 160Q431 189 334 180L199 174 58 167Z" fill="#f2efe6"/>
+  <path d="M58 164 480 160Q431 189 334 180L199 174 58 167Z" fill="#b7c5ba"/>
+  <path d="M405 141Q435 144 451 158L405 158Z" fill="#455c50"/>
+  <path d="M405 162 451 162Q435 177 405 179Z" fill="#30463b"/>
+  <path d="M60 164 140 158 130 164Z" fill="#dc714a"/>
+  <path d="M231 39 315 141M231 281 315 177" fill="none" stroke="#596960" stroke-width="1"/>
+</svg>
