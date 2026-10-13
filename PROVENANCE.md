@@ -47,3 +47,15 @@ CubeSat remains exploratory research and simulation planning, with no mission se
 The optional 3D view loads A-Frame 1.8.0 from its public CDN after a user clicks the button. Core content, fonts, and illustrations remain local. The original repository snapshot above remains the source for all linked historical code and print files.
 
 Replace status labels only when supporting evidence is committed. Add dated test logs, calibration procedures, uncertainty estimates, original datasets, fabrication photographs, and actual iteration notes before publishing corresponding research conclusions. Re-check sources and update the reviewed snapshot when changing claims.
+
+### Homepage redesign, 13 October 2026
+
+The user selected generated concepts first, then requested the darker revision of the first concept for technical reviewers and admissions readers. The implemented visual system is graphite, white ink, mint actions, Libre Franklin headings, Source Serif 4 reading text, and square, shadow-free surfaces. `DESIGN.md` and `.impeccable/design.json` record the implemented system; the earlier Figma record above remains historical.
+
+Generated images in `.impeccable/mocks/decision/` (`hero.png`, `hero-dark.png`, `work.png`, and `about.png`) are visual design references ONLY. They are not photographs, fabricated hardware, measurements, project CAD, or other research evidence, and are not shipped as page imagery. The homepage continues to use the original repository-derived toolpath and slicer previews, with their source captions and limitations preserved.
+
+The current homepage self-hosts Libre Franklin at weights 400, 600, 700, and 900, and Source Serif 4 at weights 400 and 600 as TTF files obtained through Google Fonts. `assets/fonts/new-fonts-source.css` records their download sources; `assets/fonts/display-900-source.css` records the additional display-weight source. Their SIL Open Font License 1.1 notices are preserved in `assets/fonts/libre-franklin-LICENSE.txt` and `assets/fonts/source-serif-LICENSE.txt`. Earlier self-hosted font assets and notices remain in the repository.
+
+Four historical documentation links were repaired to the current GitHub tree under `archive/legacy/`: the weekly journal template and the airfoil, drag, and flight-study challenge templates. This changes navigation targets, not the evidence claims or the reviewed October 3 snapshot. Original content boundaries, source notices, and user-attributed build observations above remain in force.
+
+The automatic opening illustration/sequence was removed from the homepage. The optional CubeSat view and its static explanatory fallback remain; the external A-Frame scene is requested only after the visitor chooses the 3D action. CubeSat remains exploratory, with no mission, built spacecraft, or flight results asserted.

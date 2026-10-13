@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#17241f">
+  <meta name="theme-color" content="#161a18">
   <meta name="description" content="Rithwik Krishna Gummadi and Rithika Priya Gummadi’s AeroAspirant fieldbook: wind-tunnel instrumentation, printable parts, and analysis tools. An open record of engineering work in progress.">
   <title>AeroAspirant — Rithwik & Rithika Gummadi</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -14,74 +14,70 @@
 <body id="top">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="masthead wrap">
-    <a class="wordmark" href="#top" aria-label="AeroAspirant home">AeroAspirant <span>/ Fieldbook</span></a>
+    <a class="wordmark" href="#top" aria-label="AeroAspirant home">AeroAspirant</a>
     <nav aria-label="Primary navigation">
-      <a href="#work">Selected work</a>
-      <a href="#cubesat">Future CubeSat</a>
+      <a href="#work">Work</a>
+      <a href="#cubesat">CubeSat</a>
       <a href="#about">Our story</a>
-      <a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab">Repository <span aria-hidden="true">↗</span></a>
+      <a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab">Research repository <svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
     </nav>
   </header>
   <main id="main" tabindex="-1">
     <section class="hero wrap" aria-labelledby="intro-title">
       <div class="hero-copy">
-        <p class="eyebrow">Independent aerodynamics research</p>
         <h1 id="intro-title">Learning to<br> measure the air.</h1>
-        <p class="byline">Rithwik Krishna Gummadi<br> &amp; Rithika Priya Gummadi</p>
-        <p class="dek">A shared aerospace fieldbook: Rithwik builds and investigates; Rithika documents, contributes ideas, and learns alongside the work.</p>
-        <a class="text-link" href="#work">Explore the wind-tunnel project <span aria-hidden="true">↓</span></a>
-      <button class="quiet-button" id="replay-flight" hidden>Watch the opening flight <span aria-hidden="true">↗</span></button>
+        <div class="hero-bottom"><p class="dek">Aerospace research by Rithwik &amp; Rithika Gummadi.<br> A wind tunnel, its instruments, and the questions we’re working through.</p><a class="primary-button" href="#work">Explore the project <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a></div>
       </div>
       <figure class="hero-plate">
         <img src="assets/honeycomb-toolpath.svg" width="600" height="540" alt="Honeycomb lattice traced from the current repository print file at a slice height of 10 millimeters." fetchpriority="high">
-        <figcaption><span class="eyebrow">Fig. A / Honeycomb toolpath</span><span>Extracted from the repository print file. Slicer geometry; not a flow simulation.</span></figcaption>
+        <figcaption><span class="caption-title">Honeycomb toolpath · Digital fabrication record</span><span>Extracted from the repository print file. Slicer geometry; not a flow simulation.</span></figcaption>
       </figure>
     </section>
 
     <div class="paper">
       <section class="section wrap" id="work" aria-labelledby="work-title">
-        <div class="section-kicker"><p class="eyebrow">Selected work / In development</p><p class="small-note">Design → instrument → investigate</p></div>
-        <h2 class="display" id="work-title">Before the airfoil,<br> build the measurement.</h2>
+
+        <h2 class="display" id="work-title">Built to investigate.</h2>
         <div class="project-intro">
           <div><h3>Wind tunnel &amp; instrumentation</h3><p class="lead">A two-fan tunnel, a plexiglass test body, and a move from smoke to dry-ice flow visualization. The current focus is the sensor system and load-cell calibration.</p></div>
-          <div class="margin-note"><span class="eyebrow">Current stage</span><p>Sensor integration / Load-cell calibration</p><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/tree/main/01_wind_tunnel_design">Open project folder <span aria-hidden="true">↗</span></a></div>
+          <div class="margin-note"><span class="caption-title">Current stage</span><p>Sensor integration / Load-cell calibration</p><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/tree/main/01_wind_tunnel_design">Open project folder <svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
         </div>
 
         <article class="build-update" aria-labelledby="update-title">
-          <p class="eyebrow">Latest build update / Reported by Rithwik</p>
-          <h3 id="update-title">The setup changed. So did the approach.</h3>
+
+          <h3 id="update-title">A different approach.</h3>
           <p>One fan at the inlet and another at the outlet move air through the tunnel. The inlet and outlet use 3D-printed parts; the main body combines plexiglass with printed supports.</p>
           <div class="iteration-story"><div><h4>The setback</h4><p>The smoke system led to repeated changes in materials, filaments, air pumps, and the overall setup.</p></div><div><h4>The change</h4><p>Rithika proposed switching to dry ice. Rithwik reports that the resulting cold-air visualization now works smoothly. This is a build observation, not a measured flow-uniformity result.</p></div><div><h4>The next measurement</h4><p>The sensor system is being built around two load cells with HX711 interfaces for lift and drag, a differential-pressure sensor, and a BME280. Load-cell calibration remains unfinished.</p></div></div>
           <p class="small-note">This account is a user-provided update beyond the reviewed repository snapshot. New photos, wiring, calibration records, and measured results have not yet been supplied. The exact pressure-sensor model still needs confirmation.</p>
         </article>
         <div class="evidence-index" role="group" aria-label="Project evidence index">
-          <a class="evidence-row" href="#acquisition"><span><strong>Firmware &amp; acquisition</strong><small>Arduino / Source available</small></span><span aria-hidden="true">↘</span></a>
-          <a class="evidence-row" href="#parts"><span><strong>Honeycomb &amp; support parts</strong><small>Four repository 3MF archives / Earlier design record</small></span><span aria-hidden="true">↘</span></a>
-          <a class="evidence-row" href="#analysis"><span><strong>Analysis tools</strong><small>Python grapher + correction prototype</small></span><span aria-hidden="true">↘</span></a>
+          <a class="evidence-row" href="#acquisition"><span><strong>Firmware &amp; acquisition</strong><small>Arduino / Source available</small></span><svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19M5 19h14V5"/></svg></a>
+          <a class="evidence-row" href="#parts"><span><strong>Honeycomb &amp; support parts</strong><small>Four repository 3MF archives / Earlier design record</small></span><svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19M5 19h14V5"/></svg></a>
+          <a class="evidence-row" href="#analysis"><span><strong>Analysis tools</strong><small>Python grapher + correction prototype</small></span><svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19M5 19h14V5"/></svg></a>
         </div>
 
         <article class="project-section" id="acquisition" aria-labelledby="acquisition-title">
-          <div class="section-label"><span class="eyebrow">Instrumentation</span><span class="folio" aria-hidden="true">A</span></div>
+
           <div class="project-body">
-            <h3 id="acquisition-title">A record of what the sensors see.</h3>
+            <h3 id="acquisition-title">Record the signal.</h3>
             <p>The earlier repository logger brings a BME280 environmental sensor, a modeled differential-pressure channel, and SD storage into one Arduino program. Its loop schedules a CSV record every two seconds and keeps raw and conditioned pressure fields separate.</p>
             <figure class="signal-figure">
               <ol class="signal-chain">
-                <li><span class="eyebrow">Inputs</span><strong>Environment<br> &amp; pressure</strong><small>BME280 + modeled MPXV7002</small></li>
-                <li><span class="eyebrow">Acquisition</span><strong>Arduino<br> logger</strong><small>I²C / analog input</small></li>
-                <li><span class="eyebrow">Record</span><strong>SD card<br> &amp; CSV</strong><small>Timestamped channels</small></li>
+                <li><span class="caption-title">Inputs</span><strong>Environment<br> &amp; pressure</strong><small>BME280 + modeled MPXV7002</small></li>
+                <li><span class="caption-title">Acquisition</span><strong>Arduino<br> logger</strong><small>I²C / analog input</small></li>
+                <li><span class="caption-title">Record</span><strong>SD card<br> &amp; CSV</strong><small>Timestamped channels</small></li>
               </ol>
-              <figcaption>Fig. B / A reading of the firmware architecture. The pressure channel includes simulated noise and conditioning; physical accuracy has not been demonstrated.</figcaption>
+              <figcaption>A reading of the firmware architecture. The pressure channel includes simulated noise and conditioning; physical accuracy has not been demonstrated.</figcaption>
             </figure>
-            <div class="source-links"><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/01_wind_tunnel_design/code/src-arduino/testUpdatedProgram/testUpdatedProgram.ino">Read the logger source <span aria-hidden="true">↗</span></a><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/01_wind_tunnel_design/code/src-arduino/testUpdatedProgram/README.md">Architecture notes <span aria-hidden="true">↗</span></a></div>
+            <div class="source-links"><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/01_wind_tunnel_design/code/src-arduino/testUpdatedProgram/testUpdatedProgram.ino">Read the logger source <svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/01_wind_tunnel_design/code/src-arduino/testUpdatedProgram/README.md">Architecture notes <svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
             <details class="note"><summary>What still needs to be established?</summary><p>Updated source and wiring for the reported load-cell system, calibration against a reference, and an uncertainty estimate. The Wokwi configuration and firmware are source artifacts, not proof of a validated measurement system.</p></details>
           </div>
         </article>
 
         <article class="project-section" id="parts" aria-labelledby="parts-title">
-          <div class="section-label"><span class="eyebrow">Fabrication files</span><span class="folio" aria-hidden="true">B</span></div>
+
           <div class="project-body">
-            <h3 id="parts-title">A closer look at the parts.</h3>
+            <h3 id="parts-title">Inspect the parts.</h3>
             <p>The wind-tunnel design folder contains two honeycomb print archives, a holder, and support corners. The figures below come directly from those files. They show the earlier digital design record. The latest build update reports printed inlet, outlet, and body supports; it does not identify which archived versions were fabricated.</p>
             <div class="artifact-viewer" data-viewer>
               <div class="artifact-tabs" role="tablist" aria-label="Inspect print artifacts" hidden>
@@ -91,15 +87,15 @@
               </div>
               <div class="artifact-panel" id="panel-toolpath">
                 <figure><div class="artifact-stage"><img src="assets/honeycomb-toolpath.svg" width="600" height="540" alt="A complete honeycomb print path viewed from above, reconstructed from extruding XY moves at Z equals 10 millimeters." loading="lazy"></div><figcaption><strong>Current honeycomb / Layer trace</strong><span>XY extrusion moves at Z = 10 mm, extracted from <code>honeyComb_Current.gcode.3mf</code>. Travel moves omitted. This is a print path, not a measured flow field.</span></figcaption></figure>
-                <a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/01_wind_tunnel_design/design/3D_parts/honeyComb_Current.gcode.3mf">Inspect current 3MF file <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/01_wind_tunnel_design/design/3D_parts/honeyComb_Current.gcode.3mf">Inspect current 3MF file <svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
               </div>
               <div class="artifact-panel" id="panel-holder">
                 <figure><div class="artifact-stage"><img src="assets/honeyComb_Holder.gcode.png" width="512" height="512" alt="Embedded slicer preview showing four angled holder pieces." loading="lazy"></div><figcaption><strong>Honeycomb holder / Embedded preview</strong><span>The original slicer thumbnail stored inside <code>honeyComb_Holder.gcode.3mf</code>.</span></figcaption></figure>
-                <a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/01_wind_tunnel_design/design/3D_parts/honeyComb_Holder.gcode.3mf">Inspect holder 3MF file <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/01_wind_tunnel_design/design/3D_parts/honeyComb_Holder.gcode.3mf">Inspect holder 3MF file <svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
               </div>
               <div class="artifact-panel" id="panel-corners">
                 <figure><div class="artifact-stage"><img src="assets/supportCorners.gcode.png" width="512" height="512" alt="Original slicer preview of the support corner print layout." loading="lazy"></div><figcaption><strong>Support corners / Embedded preview</strong><span>The original slicer thumbnail stored inside <code>supportCorners.gcode.3mf</code>.</span></figcaption></figure>
-                <a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/01_wind_tunnel_design/design/3D_parts/supportCorners.gcode.3mf">Inspect support 3MF file <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/01_wind_tunnel_design/design/3D_parts/supportCorners.gcode.3mf">Inspect support 3MF file <svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
               </div>
             </div>
             <p class="small-note">The <a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/01_wind_tunnel_design/design/3D_parts/honeyComb.gcode.3mf">other honeycomb archive</a> is also available. Filenames alone do not document the reasoning behind a revision.</p>
@@ -107,18 +103,18 @@
         </article>
 
         <article class="project-section" id="analysis" aria-labelledby="analysis-title">
-          <div class="section-label"><span class="eyebrow">Data tools</span><span class="folio" aria-hidden="true">C</span></div>
+
           <div class="project-body">
-            <h3 id="analysis-title">From a CSV to a question.</h3>
+            <h3 id="analysis-title">Read the data.</h3>
             <p>The Python grapher reads environmental channels and creates plots. A separate Flask prototype explores offset correction, summary statistics, and CSV export. These are tools for examining data; their presence does not validate the underlying measurements.</p>
             <div class="sample-record">
-              <div class="sample-heading"><h4>Sample input, not experimental results</h4><span class="eyebrow">Repository fixture</span></div>
+              <div class="sample-heading"><h4>Sample input only</h4><span class="caption-title">Repository fixture</span></div>
               <div class="table-scroll" role="region" aria-label="Sample CSV data table" tabindex="0">
                 <table><caption>Three rows from the grapher’s sample.csv. Date: 2026-03-04.</caption><thead><tr><th scope="col">Time</th><th scope="col">Temperature (°C)</th><th scope="col">Humidity (%)</th><th scope="col">Pressure (hPa)</th></tr></thead><tbody><tr><th scope="row">10:00:00</th><td>23.4</td><td>41.2</td><td>1008.6</td></tr><tr><th scope="row">10:01:00</th><td>23.5</td><td>41.0</td><td>1008.7</td></tr><tr><th scope="row">10:02:00</th><td>23.6</td><td>40.9</td><td>1008.8</td></tr></tbody></table>
               </div>
               <p>These example rows demonstrate the input format. No lift, drag, or wind-tunnel performance is inferred from them.</p>
             </div>
-            <div class="source-links"><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/01_wind_tunnel_design/code/feature-csv-data-grapher/bme280_grapher.py">Python grapher <span aria-hidden="true">↗</span></a><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/01_wind_tunnel_design/code/feature-csv-data-grapher/sample.csv">Original sample CSV <span aria-hidden="true">↗</span></a><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/tree/main/01_wind_tunnel_design/code/feature-data-correction">Correction prototype <span aria-hidden="true">↗</span></a></div>
+            <div class="source-links"><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/01_wind_tunnel_design/code/feature-csv-data-grapher/bme280_grapher.py">Python grapher <svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/01_wind_tunnel_design/code/feature-csv-data-grapher/sample.csv">Original sample CSV <svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/tree/main/01_wind_tunnel_design/code/feature-data-correction">Correction prototype <svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
             <details class="note"><summary>Why calibration remains an open question</summary><p>The correction prototype contains default offsets, but the repository does not supply a reference-calibration record establishing them. Adjusting an offset is a software operation; demonstrating accuracy requires independent measurements.</p></details>
           </div>
         </article>
@@ -126,36 +122,32 @@
 
       <section class="orbit section" id="cubesat" aria-labelledby="cubesat-title">
         <div class="wrap">
-          <p class="eyebrow">Future project / Concept only</p>
+
           <h2 class="display" id="cubesat-title">From airflow to orbit.</h2>
           <div class="orbit-grid">
-            <figure><div class="sat-stage" id="sat-stage"><img src="assets/cubesat-concept.svg" width="800" height="600" alt="Illustrative small satellite with a central instrument body, side solar panels, and antennas. This is a concept illustration, not project CAD." loading="lazy"></div><figcaption>Fig. C / An illustration of possible spacecraft subsystems. Configuration and proportions are illustrative.</figcaption></figure>
-            <div class="orbit-copy"><h3>CubeSat</h3><p class="lead">A future direction for the fieldbook.</p><p>We’re researching possible missions and exploring how simulation could help us understand them. Rithika is researching the CubeSat direction; no mission, payload, or final configuration has been selected.</p><button class="outline-button" id="open-satellite" hidden>Inspect the concept in 3D <span aria-hidden="true">↗</span></button><button class="quiet-button" id="close-satellite" hidden>Close 3D view</button><p class="small-note">Concept only. No built spacecraft, launch, or flight results are claimed.</p><p id="sat-status" class="small-note" role="status"></p></div>
+            <figure><div class="sat-stage" id="sat-stage"><img src="assets/cubesat-concept.svg" width="800" height="600" alt="Illustrative small satellite with a central instrument body, side solar panels, and antennas. This is a concept illustration, not project CAD." loading="lazy"></div><figcaption>An illustration of possible spacecraft subsystems. Configuration and proportions are illustrative.</figcaption></figure>
+            <div class="orbit-copy"><h3>CubeSat</h3><p class="lead">A future direction for the fieldbook.</p><p>We’re researching possible missions and exploring how simulation could help us understand them. Rithika is researching the CubeSat direction; no mission, payload, or final configuration has been selected.</p><button class="outline-button" id="open-satellite" hidden>Inspect the concept in 3D <svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></button><button class="quiet-button" id="close-satellite" hidden>Close 3D view</button><p class="small-note">Concept only. No built spacecraft, launch, or flight results are claimed.</p><p id="sat-status" class="small-note" role="status"></p></div>
           </div>
         </div>
       </section>
 
       <section class="notebook section" id="notebook" aria-labelledby="notebook-title">
         <div class="wrap notebook-grid">
-          <div><p class="eyebrow">Research notes / What's next</p><h2 class="display" id="notebook-title">The next questions<br> are still open.</h2><p class="lead">Airfoil comparison, drag reduction, and flight validation are planned research directions. Their current folders contain documentation templates, not completed experiments.</p><a class="text-link" href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/research_journal/weekly_logs.md">View the journal template <span aria-hidden="true">↗</span></a></div>
+          <div><h2 class="display" id="notebook-title">Questions still open.</h2><p class="lead">Airfoil comparison, drag reduction, and flight validation are planned research directions. Their current folders contain documentation templates, not completed experiments.</p><a class="text-link" href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/archive/legacy/research_journal/weekly_logs.md">View the journal template <svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
           <div class="research-list">
-            <details><summary><span>Airfoil comparison<small>Planned study</small></span><span class="plus" aria-hidden="true">+</span></summary><div><p><strong>Question:</strong> How does changing an airfoil profile affect lift and drag under comparable conditions?</p><p><strong>Evidence still needed:</strong> Named profiles, a test protocol, calibration records, and measured results.</p><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/02_airfoil_experiments/challenges.md">View current documentation <span aria-hidden="true">↗</span></a></div></details>
-            <details><summary><span>Drag reduction<small>Planned study</small></span><span class="plus" aria-hidden="true">+</span></summary><div><p><strong>Question:</strong> Which design changes reduce drag without an unacceptable trade-off in lift?</p><p><strong>Evidence still needed:</strong> A baseline configuration, documented revisions, repeat runs, and uncertainty bounds.</p><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/03_drag_analysis/challenges.md">View current documentation <span aria-hidden="true">↗</span></a></div></details>
-            <details><summary><span>Flight validation<small>Planned study</small></span><span class="plus" aria-hidden="true">+</span></summary><div><p><strong>Question:</strong> How would a finding from the test bench translate to a drone or RC aircraft?</p><p><strong>Evidence still needed:</strong> A documented platform, a flight-test method, telemetry, and comparison with laboratory results.</p><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/04_drone_or_rc_testing/challenges.md">View current documentation <span aria-hidden="true">↗</span></a></div></details>
+            <details><summary><span>Airfoil comparison<small>Planned study</small></span><span class="plus" aria-hidden="true">+</span></summary><div><p><strong>Question:</strong> How does changing an airfoil profile affect lift and drag under comparable conditions?</p><p><strong>Evidence still needed:</strong> Named profiles, a test protocol, calibration records, and measured results.</p><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/archive/legacy/02_airfoil_experiments/challenges.md">View current documentation <svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div></details>
+            <details><summary><span>Drag reduction<small>Planned study</small></span><span class="plus" aria-hidden="true">+</span></summary><div><p><strong>Question:</strong> Which design changes reduce drag without an unacceptable trade-off in lift?</p><p><strong>Evidence still needed:</strong> A baseline configuration, documented revisions, repeat runs, and uncertainty bounds.</p><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/archive/legacy/03_drag_analysis/challenges.md">View current documentation <svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div></details>
+            <details><summary><span>Flight validation<small>Planned study</small></span><span class="plus" aria-hidden="true">+</span></summary><div><p><strong>Question:</strong> How would a finding from the test bench translate to a drone or RC aircraft?</p><p><strong>Evidence still needed:</strong> A documented platform, a flight-test method, telemetry, and comparison with laboratory results.</p><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/archive/legacy/04_drone_or_rc_testing/challenges.md">View current documentation <svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div></details>
           </div>
         </div>
       </section>
 
       <section class="section wrap about" id="about" aria-labelledby="about-title">
-        <p class="eyebrow">About this fieldbook</p><div><h2 class="display" id="about-title">Engineering, with<br> the working left in.</h2><p class="lead">We’re Rithwik and Rithika, siblings sharing the process of learning through aerospace projects.</p><dl class="contributors"><div><dt>Rithwik Krishna Gummadi</dt><dd>Main builder &amp; researcher</dd></div><div><dt>Rithika Priya Gummadi</dt><dd>Documentation, dry-ice solution &amp; CubeSat research</dd></div></dl><p>Rithika documented the changes and observations, proposed the dry-ice solution, and is researching CubeSat possibilities. We also reviewed the code together. Rithwik leads the build and experimental research.</p><p>This portfolio follows the available source record. Code is shown as code, print files as digital artifacts, and unfinished studies as open questions. The next step is to make the physical experiments just as inspectable.</p><a class="text-link" href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab">Explore the complete research repository <span aria-hidden="true">↗</span></a></div>
+        <div><h2 class="display" id="about-title">Two minds.<br> One fieldbook.</h2><p class="lead">We’re Rithwik and Rithika, siblings sharing the process of learning through aerospace projects.</p><dl class="contributors"><div><dt>Rithwik Krishna Gummadi</dt><dd>Main builder &amp; researcher</dd></div><div><dt>Rithika Priya Gummadi</dt><dd>Documentation, dry-ice solution &amp; CubeSat research</dd></div></dl><p>Rithika documented the changes and observations, proposed the dry-ice solution, and is researching CubeSat possibilities. We also reviewed the code together. Rithwik leads the build and experimental research.</p><p>This portfolio follows the available source record. Code is shown as code, print files as digital artifacts, and unfinished studies as open questions. The next step is to make the physical experiments just as inspectable.</p><a class="text-link" href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab">Explore the complete research repository <svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
       </section>
     </div>
   </main>
-  <footer class="footer wrap"><div><a class="wordmark" href="#top">AeroAspirant <span>/ Fieldbook</span></a><p>An open record of work in progress.</p></div><div><p>Source reviewed <time datetime="2026-10-03">03 October 2026</time></p><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/tree/5563e841e53ad772a30a1555cb2f4b1469a3fe99">Repository snapshot <span aria-hidden="true">↗</span></a><a href="PROVENANCE.md">Sources &amp; asset provenance</a><a href="#top">Back to top ↑</a></div></footer>
-<dialog class="flight-intro" id="flight-intro" aria-labelledby="flight-title">
-    <div class="flight-header"><p class="eyebrow" id="flight-title">AeroAspirant / A flight into the fieldbook</p><button class="outline-button" id="skip-flight" autofocus>Skip intro</button></div>
-    <div class="flight-art" aria-hidden="true"><div class="flight-guide"></div><img class="flight-plane" src="assets/airplane.svg" width="520" height="320" alt=""><img class="flight-target" src="assets/honeycomb-toolpath.svg" width="600" height="540" alt=""></div>
-    <p class="flight-caption">From a question about flight<br> to a closer look at the evidence.</p>
-  </dialog>
+  <footer class="footer wrap"><a class="footer-name" href="#top" aria-label="AeroAspirant back to top">AeroAspirant</a><div><a class="wordmark" href="#top">AeroAspirant</a><p>An open record of work in progress.</p></div><div><p>Source reviewed <time datetime="2026-10-03">03 October 2026</time></p><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/tree/5563e841e53ad772a30a1555cb2f4b1469a3fe99">Repository snapshot <svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="PROVENANCE.md">Sources &amp; asset provenance</a><a href="#top">Back to top <svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V4m-6 6 6-6 6 6"/></svg></a></div></footer>
+
 </body>
 </html>

@@ -20,7 +20,7 @@ For an existing dedicated website repository, place the same files at its publis
 - `index.html`: complete, readable content and navigation.
 - `styles.css`: global design tokens, layout, responsive rules, focus, print, and reduced-motion handling.
 - `fonts.css`: local font declarations with `font-display: swap`.
-- `script.js`: artifact tabs, skippable opening flight, and optional 3D loading. Without JavaScript, all evidence remains visible. The opening plays once per browser-tab session, bypasses deep links and reduced-motion preferences, and can be replayed.
+- `script.js`: artifact tabs, a brief nonblocking headline entrance, and optional 3D loading. Without JavaScript, all evidence remains visible. Reduced-motion preferences disable the motion.
 - `cubesat-viewer.html`, `cubesat.css`, `cubesat.js`: isolated, on-demand A-Frame concept with rotation buttons and static fallback. This is an illustration, not a flight simulator or engineering model.
 - `assets/`: genuine repository-derived evidence, brand favicon, fonts, and licenses.
 - `PROVENANCE.md`: claim mapping and asset origins.
@@ -33,3 +33,7 @@ Edit factual copy and source links in HTML. Change global visual values in `:roo
 The sample data is an example fixture, not measured aerodynamic performance. The original Flask analysis tool remains a linked research artifact; it does not run on GitHub Pages.
 
 No analytics, cookies, contact-form service, or invented contact details are included. The repository is the current public route to the research record.
+
+## Current website repository
+
+The site lives at `aeriswghs-ux/aeriswghs-ux.github.io`, with `main` as the publishing branch. Development-only generated concepts, direction briefs, and inspector output are excluded by `.gitignore`.

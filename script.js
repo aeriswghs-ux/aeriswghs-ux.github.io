@@ -34,41 +34,6 @@ document.querySelectorAll('[data-viewer]').forEach((viewer) => {
   tablist.hidden = false;
 });
 
-// A short, optional opening. Reduced motion and deep links go straight to content.
-const motion = matchMedia('(prefers-reduced-motion: reduce)');
-const intro = document.getElementById('flight-intro');
-const replay = document.getElementById('replay-flight');
-let flightTimer;
-let returnFocus;
-function finishFlight(showProject = false) {
-  clearTimeout(flightTimer);
-  if (!intro.open) return;
-  intro.close();
-  if (showProject) {
-    const work = document.getElementById('work');
-    work.tabIndex = -1;
-    work.focus({preventScroll: true});
-    work.scrollIntoView({behavior: 'instant'});
-  } else if (returnFocus) returnFocus.focus({preventScroll: true});
-}
-function startFlight() {
-  if (motion.matches) { document.getElementById('work').scrollIntoView(); return; }
-  returnFocus = document.activeElement;
-  intro.showModal();
-  flightTimer = setTimeout(() => finishFlight(true), 4200);
-}
-if (typeof intro.showModal === 'function') {
-  replay.hidden = false;
-  replay.addEventListener('click', startFlight);
-  document.getElementById('skip-flight').addEventListener('click', () => finishFlight());
-  intro.addEventListener('cancel', event => { event.preventDefault(); finishFlight(); });
-  motion.addEventListener('change', () => { if (motion.matches) finishFlight(); });
-  try {
-    if (!sessionStorage.getItem('aero-flight-seen') && !location.hash && !motion.matches) startFlight();
-    sessionStorage.setItem('aero-flight-seen', '1');
-  } catch { /* Storage restrictions leave the opening available on request. */ }
-}
-
 // Load WebGL only after an explicit request; the illustrated alternative remains.
 const openSatellite = document.getElementById('open-satellite');
 const closeSatellite = document.getElementById('close-satellite');
@@ -94,3 +59,16 @@ closeSatellite.addEventListener('click', () => {
   status.textContent = '';
   openSatellite.focus();
 });
+
+// Content remains visible when animation or JavaScript is unavailable.
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+if (!reducedMotion.matches && 'IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-entering');
+      observer.unobserve(entry.target);
+    });
+  }, {threshold: 0.12});
+  document.querySelectorAll('.hero-copy').forEach((element) => observer.observe(element));
+}

@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-13T00:00:00-05:00",
+  "title": "Design System: AeroAspirant",
+  "extensions": {
+    "colorMeta": {
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Graphite ground",
+        "tonalRamp": [
+          "oklch(15% 0.008 145)",
+          "oklch(26% 0.008 145)",
+          "oklch(37% 0.008 145)",
+          "oklch(48% 0.008 145)",
+          "oklch(59% 0.008 145)",
+          "oklch(70% 0.008 145)",
+          "oklch(81% 0.008 145)",
+          "oklch(95% 0.008 145)"
+        ],
+        "rampPurpose": "Synthesized preview ramp; these steps are not shipped CSS tokens."
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Raised tonal surface",
+        "tonalRamp": [
+          "oklch(15% 0.008 145)",
+          "oklch(26% 0.008 145)",
+          "oklch(37% 0.008 145)",
+          "oklch(48% 0.008 145)",
+          "oklch(59% 0.008 145)",
+          "oklch(70% 0.008 145)",
+          "oklch(81% 0.008 145)",
+          "oklch(95% 0.008 145)"
+        ],
+        "rampPurpose": "Synthesized preview ramp; these steps are not shipped CSS tokens."
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White ink",
+        "tonalRamp": [
+          "oklch(15% 0.008 145)",
+          "oklch(26% 0.008 145)",
+          "oklch(37% 0.008 145)",
+          "oklch(48% 0.008 145)",
+          "oklch(59% 0.008 145)",
+          "oklch(70% 0.008 145)",
+          "oklch(81% 0.008 145)",
+          "oklch(95% 0.008 145)"
+        ],
+        "rampPurpose": "Synthesized preview ramp; these steps are not shipped CSS tokens."
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted caption ink",
+        "tonalRamp": [
+          "oklch(15% 0.008 145)",
+          "oklch(26% 0.008 145)",
+          "oklch(37% 0.008 145)",
+          "oklch(48% 0.008 145)",
+          "oklch(59% 0.008 145)",
+          "oklch(70% 0.008 145)",
+          "oklch(81% 0.008 145)",
+          "oklch(95% 0.008 145)"
+        ],
+        "rampPurpose": "Synthesized preview ramp; these steps are not shipped CSS tokens."
+      },
+      "mint": {
+        "role": "primary",
+        "displayName": "Mint action",
+        "tonalRamp": [
+          "oklch(15% 0.16 145)",
+          "oklch(26% 0.16 145)",
+          "oklch(37% 0.16 145)",
+          "oklch(48% 0.16 145)",
+          "oklch(59% 0.16 145)",
+          "oklch(70% 0.16 145)",
+          "oklch(81% 0.16 145)",
+          "oklch(95% 0.16 145)"
+        ],
+        "rampPurpose": "Synthesized preview ramp; these steps are not shipped CSS tokens."
+      },
+      "black": {
+        "role": "neutral",
+        "displayName": "Black media stage",
+        "tonalRamp": [
+          "oklch(15% 0.008 145)",
+          "oklch(26% 0.008 145)",
+          "oklch(37% 0.008 145)",
+          "oklch(48% 0.008 145)",
+          "oklch(59% 0.008 145)",
+          "oklch(70% 0.008 145)",
+          "oklch(81% 0.008 145)",
+          "oklch(95% 0.008 145)"
+        ],
+        "rampPurpose": "Synthesized preview ramp; these steps are not shipped CSS tokens."
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Large editorial opening headings."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Project and evidence titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Sustained reading; maximum measure 68ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Captions and interface context."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "duration",
+        "value": "240ms",
+        "purpose": "Action and disclosure state transitions."
+      },
+      {
+        "name": "entrance",
+        "value": "700ms",
+        "purpose": "Section entrance."
+      },
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Action and entrance easing."
+      },
+      {
+        "name": "artifact-drift",
+        "value": "16s ease-in-out infinite alternate",
+        "purpose": "Honeycomb stage scale from 1 to 1.035; disabled for reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "64rem"
+      },
+      {
+        "name": "stacked",
+        "value": "48rem"
+      },
+      {
+        "name": "narrow",
+        "value": "24rem"
+      }
+    ],
+    "focus": {
+      "width": "3px",
+      "offset": "5px",
+      "colorToken": "mint"
+    },
+    "layout": {
+      "maxWidth": "100rem",
+      "measure": "68ch",
+      "targetSize": "48px"
+    }
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Mint action shared by project and optional CubeSat controls.",
+      "html": "<button class=\"ds-primary\">Explore the project <svg class=\"ds-arrow\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></button>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:space-between;gap:1.5rem;min-height:48px;background:var(--accent,#a7ff9c);color:var(--accent-ink,#161a18);padding:1rem 1.5rem;font:600 .9375rem/1.4 'Libre Franklin',sans-serif;border:0;border-radius:0;cursor:pointer;transition:transform 240ms cubic-bezier(.16,1,.3,1)}.ds-primary:hover{transform:translateY(-3px)}.ds-primary:active{transform:translateY(2px)}.ds-primary:focus-visible{outline:3px solid var(--accent,#a7ff9c);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}.ds-arrow{width:24px;height:24px;stroke:currentColor;stroke-width:1.5;fill:none}"
+    },
+    {
+      "name": "Quiet action",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Underlined secondary action for closing the optional scene.",
+      "html": "<button class=\"ds-quiet\">Close 3D view</button>",
+      "css": ".ds-quiet{min-height:48px;padding:1rem 0;border:0;border-radius:0;background:transparent;color:var(--ink,#f4f6f2);font:.9375rem/1.6 'Libre Franklin',sans-serif;text-decoration:underline;text-underline-offset:.25em;cursor:pointer}.ds-quiet:hover{text-decoration-color:var(--accent,#a7ff9c)}.ds-quiet:active{transform:translateY(2px)}.ds-quiet:focus-visible{outline:3px solid var(--accent,#a7ff9c);outline-offset:5px}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Wrapping text links with mint hover and visible focus.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Preview navigation\"><a href=\"#work\">Work</a><a href=\"#cubesat\">CubeSat</a><a href=\"#about\">Our story</a></nav>",
+      "css": ".ds-nav{display:flex;flex-wrap:wrap;gap:2rem;font:.9375rem/1.6 'Libre Franklin',sans-serif;color:var(--ink,#f4f6f2)}.ds-nav a{display:inline-flex;align-items:center;min-height:48px;color:inherit;text-decoration:none}.ds-nav a:hover{color:var(--accent,#a7ff9c)}.ds-nav a:focus-visible{outline:3px solid var(--accent,#a7ff9c);outline-offset:5px}@media(max-width:64rem){.ds-nav{gap:1rem}}"
+    },
+    {
+      "name": "Artifact tab",
+      "kind": "custom",
+      "refersTo": "artifact-tab",
+      "description": "Flat artifact selector; mint identifies its selected state.",
+      "html": "<div class=\"ds-tabs\" role=\"tablist\" aria-label=\"Artifact preview\"><button role=\"tab\" aria-selected=\"true\">Toolpath</button><button role=\"tab\" aria-selected=\"false\">Holder</button></div>",
+      "css": ".ds-tabs{display:flex;flex-wrap:wrap;gap:.5rem}.ds-tabs button{padding:1rem 1.5rem;min-height:48px;border:0;border-radius:0;background:var(--surface,#202622);color:var(--ink,#f4f6f2);font:.9375rem/1.5 'Libre Franklin',sans-serif;cursor:pointer}.ds-tabs button[aria-selected=true]{background:var(--accent,#a7ff9c);color:var(--accent-ink,#161a18)}.ds-tabs button:hover{transform:translateY(-2px)}.ds-tabs button:active{transform:translateY(2px)}.ds-tabs button:focus-visible{outline:3px solid var(--accent,#a7ff9c);outline-offset:5px}"
+    },
+    {
+      "name": "Evidence row",
+      "kind": "card",
+      "refersTo": "evidence-row",
+      "description": "A source index entry with title, status, and directional mark.",
+      "html": "<a class=\"ds-evidence\" href=\"#acquisition\"><span><strong>Firmware &amp; acquisition</strong><small>Arduino / Source available</small></span><svg class=\"ds-arrow\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 5 19 19M5 19h14V5\"/></svg></a>",
+      "css": ".ds-evidence{display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:1.5rem;background:var(--surface,#202622);color:var(--ink,#f4f6f2);text-decoration:none;border-radius:0}.ds-evidence strong{display:block;font:600 clamp(1.375rem,2.1vw,2rem)/1.2 'Libre Franklin',sans-serif}.ds-evidence small{display:block;margin-top:.5rem;color:var(--muted,#b9c3bb);font:.9375rem/1.6 'Libre Franklin',sans-serif}.ds-evidence:hover{background:var(--black,#101411)}.ds-evidence:focus-visible{outline:3px solid var(--accent,#a7ff9c);outline-offset:5px}.ds-arrow{width:20px;height:20px;flex-shrink:0;stroke:currentColor;stroke-width:1.5;fill:none}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Research Fieldbook",
+    "overview": "A dark editorial portfolio gives technical artifacts the space and clarity of a publication. Strong sans-serif headings establish hierarchy; serif paragraphs support sustained reading. The selected darker concept uses graphite, white ink, and mint actions.",
+    "keyCharacteristics": [
+      "Broad, flat media stages.",
+      "Bold headings with readable serif prose.",
+      "Square actions and restrained mint emphasis.",
+      "Source captions that distinguish evidence from illustration."
+    ],
+    "rules": [
+      {
+        "name": "The Evidence Rule",
+        "body": "Color indicates interface state, never scientific validity or a completed result.",
+        "section": "colors"
+      },
+      {
+        "name": "The Flat Surface Rule",
+        "body": "Preserve tonal separation and square geometry rather than adding shadows.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use the graphite ground, white ink, and mint interaction palette.",
+      "Do preserve readable serif prose and clear sans-serif hierarchy.",
+      "Do caption source artifacts and explanatory illustrations accurately.",
+      "Do retain keyboard focus, wrapping layouts, and reduced-motion behavior."
+    ],
+    "donts": [
+      "Don't add rounded cards, drop shadows, or a blocking opening sequence.",
+      "Don't present generated concepts as photographs, hardware, or research evidence.",
+      "Don't obscure unfinished calibration or the exploratory status of CubeSat work."
+    ]
+  }
+}
