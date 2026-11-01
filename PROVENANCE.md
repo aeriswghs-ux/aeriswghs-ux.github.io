@@ -1,5 +1,37 @@
 # Source record & asset provenance
 
+## Engineering Fieldbook expansion — 13 October 2026
+
+The six-section site adds typed content records, Markdown notebook authoring, a formal draft archive, visual explorations, and static detail pages. The complete previous page is retained in `research-record.html`, with its styles and behavior in `legacy.css` and `legacy-script.js`. Original source disclosures and historical context below remain available.
+
+### Owner-confirmed October 13 update
+
+The owner clarified that “cold dryers” meant **dry ice placed in water**. The setup sits in front of the inlet; air is blown into it and a fan at the other end draws air out. The owner reports a smooth visible flow. This is a qualitative build observation, not a measured flow-uniformity result.
+
+A new stand uses differential pressure, load cells intended for lift and drag measurements, and a BME280 for environmental conditions. The stand remains under development. A 3D mounting model for airfoils and model aircraft is planned. Updated files will be published on GitHub later; the owner instructed the website to retain the existing files for now. No new calibration completion, measurement values, exact pressure-sensor model, stand CAD, or original photographs were supplied. The prior sibling roles remain unchanged.
+
+The new dated notebook entry is an edited transcription of this update. Other initial notebook entries are explicitly labeled editorial transcriptions or source reviews. The research records are draft/planning records, not papers, completed experiments, publications, or peer-reviewed work.
+
+### Added media
+
+NASA images are used for educational and informational context under the [NASA Images and Media Usage Guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/), reviewed 13 October 2026. They do not depict the students' hardware and do not imply NASA endorsement. Images were downloaded locally, resized proportionally, and encoded as WebP; no scientific features were added or retouched. Layout crops do not modify the source file.
+
+| Local prefix | Source image and credit | Original media URL |
+| --- | --- | --- |
+| `assets/media/earthrise-*` | [Earthrise, Apollo 8, 24 December 1968](https://www.nasa.gov/image-article/apollo-8-astronaut-bill-anders-captures-earthrise/) · NASA / Bill Anders | `https://www.nasa.gov/wp-content/uploads/2023/03/apollo_8_earthrise_1968_as08-14-2383.jpg` |
+| `assets/media/solar-arrays-*` | [ISS solar arrays, 1 January 2015](https://www.nasa.gov/image-article/station-solar-arrays-from-russian-zarya-module/) · NASA | `https://www.nasa.gov/wp-content/uploads/2023/03/iss042e094136_0.jpg` |
+| `assets/media/wind-tunnel-*` | [Richard Whitcomb with a wind-tunnel model, 1959](https://www.nasa.gov/history/the-national-advisory-committee-for-aeronautics-naca/) · NASA | `https://www.nasa.gov/wp-content/uploads/2023/03/lrc-rwhitcomb-1959-arearule-fuselage_0.jpg` |
+
+Each image has 640-, 1000-, and 1041-pixel variants, with no upscaling. Full provenance, alt text, dimensions, kind, and caption are stored in `content/media.ts` and surfaced on exploration details. `assets/acquisition-diagram.svg` is an original geometric diagram derived from the earlier logger source, explicitly not a verified wiring schematic or representation of the newer stand.
+
+The existing environmental sample values are reproduced exactly. The downloadable local CSV is a normalized export with explicit unit headers, not a byte-for-byte copy of the original CSV. Its original repository source is linked. No measured aerodynamic results have been generated. The general dynamic-pressure relation in the calibration note is educational context supported by [NASA Glenn](https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/dynamic-pressure/), not a calculation from this tunnel.
+
+No AI-generated imagery is shipped by this expansion. No assets from Cosmos, Awwwards, Behance, Dribbble, Pinterest, Lapa, or Muzli are reused. Existing font licenses remain preserved. The new interface uses the already-local Newsreader, IBM Plex Sans, and IBM Plex Mono WOFF2 files. KaTeX is used only at build time and its MIT notice is retained in `assets/KATEX-LICENSE.txt`.
+
+Repository deep-link paths were rechecked against the current GitHub tree on October 13. This confirms path availability, not that the newer hardware configuration has been committed or validated.
+
+---
+
 Reviewed 2026-10-03. Technical source: [aeriswghs-ux/Aerodynamics-Research-Lab](https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab), commit `5563e841e53ad772a30a1555cb2f4b1469a3fe99`.
 
 ## Content boundaries

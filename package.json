@@ -1,0 +1,26 @@
+{
+  "name": "aeroaspirant-fieldbook",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsx scripts/build.ts",
+    "dev": "tsx scripts/serve.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "node --check script.js && node --check cubesat.js && tsx scripts/check.ts",
+    "test": "tsx --test tests/*.test.ts",
+    "check": "npm run typecheck && npm run build && npm run lint && npm test"
+  },
+  "devDependencies": {
+    "@types/katex": "^0.16.7",
+    "@types/markdown-it": "^14.1.2",
+    "@types/node": "^24.0.0",
+    "axe-core": "^4.14.0",
+    "katex": "^0.19.0",
+    "markdown-it": "^14.1.0",
+    "prettier": "^3.9.10",
+    "sharp": "^0.35.5",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}

@@ -1,0 +1,74 @@
+<!doctype html><html lang="en" data-default-theme="light"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ed">
+<title>Reading a honeycomb, one layer at a time. · AeroAspirant</title><meta name="description" content="A print archive contains more than a thumbnail. The extrusion moves reveal the honeycomb layer itself.">
+<meta property="og:title" content="Reading a honeycomb, one layer at a time. · The Engineering Fieldbook"><meta property="og:description" content="A print archive contains more than a thumbnail. The extrusion moves reveal the honeycomb layer itself."><meta property="og:type" content="website">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../fonts.css"><link rel="stylesheet" href="../../styles.css">
+<script src="../../theme.js"></script><script src="../../script.js" defer></script><link rel="canonical" href="https://aeriswghs-ux.github.io/notebook/inside-a-print-file/"><meta property="og:url" content="https://aeriswghs-ux.github.io/notebook/inside-a-print-file/"><meta property="og:image" content="https://aeriswghs-ux.github.io/assets/media/earthrise-1041.webp"><meta property="og:image:alt" content="NASA / Bill Anders — Earthrise, Apollo 8"><meta name="twitter:card" content="summary_large_image"></head>
+<body id="top" data-root="../../"><a class="skip-link" href="#main">Skip to content</a>
+<header class="masthead"><div class="wrap masthead-inner"><a class="brand" href="../../index.html" aria-label="AeroAspirant home"><svg class="brand-mark" viewBox="0 0 36 36" width="34" height="34" aria-hidden="true"><path d="m8 29 10-23 10 23M12 21h12" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="18" cy="20" rx="17" ry="6" transform="rotate(-35 18 20)" fill="none" stroke="currentColor" stroke-width="1"/></svg><span>AeroAspirant<span class="brand-sub">The Engineering Fieldbook</span></span></a>
+<nav id="primary-nav" aria-label="Primary navigation"><a href="../../index.html">Home</a><a href="../../projects/">Projects</a><a href="../../research/">Research</a><a href="../../notebook/" aria-current="page">Notebook</a><a href="../../explorations/">Explorations</a><a href="../../about/">About</a></nav>
+<div class="nav-tools"><a class="icon-button" href="../../search/" aria-label="Search the fieldbook"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 21l-5-5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0"/></svg></a><button class="icon-button" data-theme-toggle aria-label="Switch color mode" aria-pressed="false" hidden><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3V1m0 22v-2M3 12H1m22 0h-2M4.2 4.2 2.8 2.8m18.4 18.4-1.4-1.4M4.2 19.8l-1.4 1.4M21.2 2.8l-1.4 1.4M17 12a5 5 0 1 1-10 0 5 5 0 0 1 10 0"/></svg></button><button class="icon-button menu-button" data-menu-toggle aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation" hidden><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div></div></header>
+<main id="main" tabindex="-1"><nav class="breadcrumb wrap" aria-label="Breadcrumb"><a href="../../index.html">Home</a><span aria-hidden="true">/</span><a href="../../notebook/">Notebook</a><span aria-hidden="true">/</span><span>Entry 001</span></nav><header class="detail-head notebook-head wrap"><div class="detail-meta"><span class="mono">ENTRY 001</span><span>Research note</span><time datetime="2026-10-03">03 Oct 2026</time></div><h1>Reading a honeycomb, one layer at a time.</h1><p class="page-dek">A print archive contains more than a thumbnail. The extrusion moves reveal the honeycomb layer itself.</p><div class="tags"><a href="../../notebook/?tag=Fabrication">Fabrication</a><a href="../../notebook/?tag=Geometry">Geometry</a></div></header><div class="wrap reading-layout"><aside class="contents"><details open><summary>In this record</summary><nav aria-label="On this page"><a href="#research-objective">Research objective</a><a href="#source-material">Source material</a><a href="#method">Method</a><a href="#observations">Observations</a><a href="#analysis-and-limitations">Analysis and limitations</a><a href="#what-this-note-establishes">What this note establishes</a><a href="#next-steps">Next steps</a><a href="#references">Sources</a></nav></details></aside><article class="prose notebook-page"><div class="entry-provenance"><p>Editorial transcription of the existing asset-provenance record. No new fabrication or aerodynamic result is inferred.</p><dl><dt>Associated project</dt><dd><a href="../../projects/wind-tunnel/">Learning to measure the air.</a></dd><dt>Last revised</dt><dd><time datetime="2026-10-13">13 Oct 2026</time></dd></dl></div><h2 id="research-objective">Research objective</h2>
+<p>Expose the geometry recorded in the current honeycomb print archive without pretending it is a flow simulation.</p>
+<h2 id="source-material">Source material</h2>
+<p>The repository contains four sliced 3MF archives: two honeycomb files, a holder, and support corners. The source record does not establish which archived versions were fabricated in the later build.</p>
+<h2 id="method">Method</h2>
+<p>The existing visualization was reconstructed from <code>Metadata/plate_1.gcode</code> in <code>honeyComb_Current.gcode.3mf</code>. It uses 3,724 positive-extrusion XY line segments in the slice whose <code>Z_HEIGHT</code> is 10 mm. Travel-only moves are omitted.</p>
+<p>Coordinates were mapped uniformly into a 600 × 540 illustration and rounded to 0.1 display units. The preview in the archive showed a solid slab; the layer trace reveals the honeycomb infill.</p>
+<h2 id="observations">Observations</h2>
+<p>The image is a digital fabrication artifact. Its paths are evidence of instructions in the archive, not a photograph of a printed part, a dimensioned manufacturing drawing, or a measured flow field.</p>
+<h2 id="analysis-and-limitations">Analysis and limitations</h2>
+<p>Filenames alone do not explain why a design changed. A layer trace also cannot establish how accurately a printer reproduced the part or how the finished honeycomb affects the flow.</p>
+<h2 id="what-this-note-establishes">What this note establishes</h2>
+<p>A source artifact becomes more useful when a reader can inspect both the rendering and the original file. The caption is part of the evidence: it defines what the image can and cannot show.</p>
+<h2 id="next-steps">Next steps</h2>
+<p>Link fabricated parts to exact archive versions. Add original photographs, dimensions, and test records when available.</p>
+<figure class="media-figure "><div class="figure-image media-artifact"><img class="" src="../../assets/honeycomb-toolpath.svg" width="600" height="540" alt="Honeycomb extrusion paths reconstructed from the repository print archive at a layer height of 10 millimeters." loading="lazy" decoding="async"></div><figcaption><span>Actual print-file layer trace · Z = 10 mm. Toolpath, not CFD or measured airflow.</span><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/01_wind_tunnel_design/design/3D_parts/honeyComb_Current.gcode.3mf">Aerodynamics Research Lab <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></figcaption></figure><section class="references" id="references"><h2>Sources & related documents</h2><ol><li><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/01_wind_tunnel_design/design/3D_parts/honeyComb_Current.gcode.3mf">Current honeycomb 3MF archive <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></li><li><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/01_wind_tunnel_design/design/3D_parts/honeyComb.gcode.3mf">Earlier honeycomb archive <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></li><li><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/01_wind_tunnel_design/design/3D_parts/honeyComb_Holder.gcode.3mf">Honeycomb holder 3MF archive <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></li><li><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/01_wind_tunnel_design/design/3D_parts/supportCorners.gcode.3mf">Support corners 3MF archive <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></li></ol><p class="small-note">See the <a href="../../PROVENANCE.md">provenance record</a> for source boundaries and attribution.</p></section></article></div><section class="wrap related-section"><h2>Keep following the thread.</h2><article class="note-row" data-filter-item data-category="Build log" data-status="wind-tunnel" data-tags="Instrumentation|Fabrication|Flow visualization" data-search="a clearer flow. a new measurement stand. dry ice in water makes the inlet flow visible. the next challenge is a stand that can hold airfoils and model aircraft. instrumentation fabrication flow visualization build log ## research objective
+
+develop the wind-tunnel measurement stand so it can accommodate airfoils and model aircraft while supporting lift, drag, pressure, and environmental measurements.
+
+## the current setup
+
+dry ice sits in water in front of the inlet. air is blown into that setup so the visible flow enters the tunnel; a fan on the opposite side draws air out. the owner reports that the visualization flows smoothly. that description is a qualitative observation, not a measured flow-uniformity result.
+
+## materials and instruments
+
+| element | current account |
+| --- | --- |
+| visualization | dry ice in water in front of the inlet |
+| air movement | air blown into the inlet setup; outlet fan draws air out |
+| pressure | differential-pressure sensor; exact model not supplied |
+| forces | load cells intended for lift and drag measurements |
+| environment | bme280 for environmental conditions |
+| mounting | new stand under development; 3d model planned |
+
+the earlier record identifies hx711 interfaces for the load cells. new wiring and source have not yet been posted, so the linked arduino program remains an earlier implementation.
+
+## design question
+
+how should the stand support different test objects while keeping the load paths clear and the sensor readings interpretable?
+
+## method and observations
+
+this entry records the owner&#39;s description of the present build. it is not a test procedure. no loads, airspeeds, sensor readings, acceptance thresholds, or repeated trials were supplied with the update.
+
+## what is still open
+
+the stand is unfinished. the next step is a 3d model that can accommodate airfoils and model aircraft. calibration was unfinished in the previous record; no completion update has been provided.
+
+## what changed
+
+the visualization approach has moved away from the troublesome smoke system. the present focus is shifting toward the measurement stand. the archived files remain useful evidence, but should not be mistaken for the latest stand configuration.
+
+## next steps
+
+- finish and document the stand model.
+- record mounting geometry, sensor connections, and channel definitions.
+- complete calibration and publish the procedure and raw records.
+- add the updated files and photographs to github.
+
+## revision record
+
+**13 october 2026:** created from the owner&#39;s update. the owner clarified that “cold dryers” meant dry ice placed in water. no new measurements were added.
+"><div class="note-date"><span class="mono">N° 005</span><time datetime="2026-10-13">13 Oct 2026</time></div><div class="note-main"><div class="card-meta"><span>Build log</span><span>Aerodynamics</span></div><h2><a href="../../notebook/stand-in-progress/">A clearer flow. A new measurement stand.</a></h2><p>Dry ice in water makes the inlet flow visible. The next challenge is a stand that can hold airfoils and model aircraft.</p><div class="tags"><span>Instrumentation</span><span>Fabrication</span><span>Flow visualization</span></div></div><a class="row-arrow" href="../../notebook/stand-in-progress/" aria-label="Read A clearer flow. A new measurement stand."><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a></article></section></main>
+<footer class="footer"><div class="wrap"><div class="footer-top"><a class="footer-title" href="../../index.html">Keep asking.<br><em>Keep building.</em></a><div><p>A fieldbook by<br><strong>Rithwik & Rithika Gummadi.</strong></p><p>Questions, experiments, and the work in between.</p><a class="text-link" href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab">Explore the research repository <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div></div><div class="footer-bottom"><span>AeroAspirant · An open record of work in progress</span><a href="../../research-record.html">Original research record</a><a href="../../PROVENANCE.md">Sources & media credits</a><a href="#top">Back to top</a></div></div></footer></body></html>

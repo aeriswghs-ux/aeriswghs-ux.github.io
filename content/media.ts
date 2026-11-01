@@ -1,0 +1,112 @@
+import type { MediaAsset } from "../src/content-types.ts";
+import { references } from "./references.ts";
+const source = (id: string) => references.find((r) => r.id === id)!.url;
+export const media: MediaAsset[] = [
+  {
+    id: "earthrise",
+    src: "assets/media/earthrise-1041.webp",
+    width: 1041,
+    height: 813,
+    responsive: true,
+    alt: "The blue Earth above the gray lunar horizon in the blackness of space.",
+    caption:
+      "Earthrise, Apollo 8 · 24 December 1968. Historical inspiration; not a student project.",
+    credit: "NASA / Bill Anders",
+    source: source("earthrise"),
+    license: "NASA educational and informational media usage guidelines",
+    kind: "photograph",
+  },
+  {
+    id: "solar",
+    src: "assets/media/solar-arrays-1041.webp",
+    width: 1041,
+    height: 693,
+    responsive: true,
+    alt: "International Space Station solar arrays above the curved, darkening Earth.",
+    caption:
+      "ISS solar arrays over Earth · 1 January 2015. Reference imagery, not our hardware.",
+    credit: "NASA",
+    source: source("solar"),
+    license: "NASA educational and informational media usage guidelines",
+    kind: "photograph",
+  },
+  {
+    id: "naca",
+    src: "assets/media/wind-tunnel-1041.webp",
+    width: 1041,
+    height: 753,
+    responsive: true,
+    alt: "NASA aerodynamicist Richard Whitcomb with a wind-tunnel model in 1959.",
+    caption:
+      "Richard Whitcomb with a wind-tunnel model, 1959. Historical research context.",
+    credit: "NASA",
+    source: source("naca"),
+    license: "NASA educational and informational media usage guidelines",
+    kind: "photograph",
+  },
+  {
+    id: "honeycomb",
+    src: "assets/honeycomb-toolpath.svg",
+    width: 600,
+    height: 540,
+    alt: "Honeycomb extrusion paths reconstructed from the repository print archive at a layer height of 10 millimeters.",
+    caption:
+      "Actual print-file layer trace · Z = 10 mm. Toolpath, not CFD or measured airflow.",
+    credit: "Aerodynamics Research Lab",
+    source: source("honeycomb"),
+    license: "Repository MIT license; see assets/SOURCE-LICENSE.txt",
+    kind: "artifact",
+  },
+  {
+    id: "holder",
+    src: "assets/honeyComb_Holder.gcode.png",
+    width: 512,
+    height: 512,
+    alt: "Four holder components shown in the original slicer thumbnail.",
+    caption:
+      "Original embedded honeycomb-holder slicer preview. Archived design version.",
+    credit: "Aerodynamics Research Lab",
+    source: source("holder"),
+    license: "Repository MIT license",
+    kind: "artifact",
+  },
+  {
+    id: "corners",
+    src: "assets/supportCorners.gcode.png",
+    width: 512,
+    height: 512,
+    alt: "Support-corner components arranged on the slicer build plate.",
+    caption:
+      "Original embedded support-corner slicer preview. Fabricated version not established.",
+    credit: "Aerodynamics Research Lab",
+    source: source("corners"),
+    license: "Repository MIT license",
+    kind: "artifact",
+  },
+  {
+    id: "cubesat",
+    src: "assets/cubesat-concept.svg",
+    width: 800,
+    height: 600,
+    alt: "Illustrative satellite central body, solar-panel wings, and antenna.",
+    caption:
+      "Possible CubeSat subsystems. Original explanatory illustration; not project CAD.",
+    credit: "AeroAspirant",
+    source: "PROVENANCE.md",
+    license: "Original portfolio illustration",
+    kind: "illustration",
+  },
+  {
+    id: "acquisition",
+    src: "assets/acquisition-diagram.svg",
+    width: 1000,
+    height: 560,
+    alt: "Environmental and modeled pressure inputs feed an Arduino logger, which writes CSV records to SD storage.",
+    caption:
+      "Architecture derived from the earlier logger source. Not a wiring diagram.",
+    credit: "AeroAspirant",
+    source: source("logger"),
+    license: "Original source-based diagram",
+    kind: "diagram",
+  },
+];
