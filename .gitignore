@@ -1,3 +1,7 @@
 .impeccable/*
 !.impeccable/design.json
 .taste-skill/
+
+node_modules/
+.env.local
+.env.*.local
