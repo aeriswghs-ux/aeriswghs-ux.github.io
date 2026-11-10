@@ -1,242 +1,449 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-13T00:00:00-05:00",
-  "title": "Design System: AeroAspirant",
+  "generatedAt": "2026-10-13T20:52:06.332211+00:00",
+  "title": "Design System: AeroAspirant — The Engineering Fieldbook",
   "extensions": {
     "colorMeta": {
-      "graphite": {
+      "paper": {
         "role": "neutral",
-        "displayName": "Graphite ground",
+        "displayName": "Warm paper",
         "tonalRamp": [
-          "oklch(15% 0.008 145)",
-          "oklch(26% 0.008 145)",
-          "oklch(37% 0.008 145)",
-          "oklch(48% 0.008 145)",
-          "oklch(59% 0.008 145)",
-          "oklch(70% 0.008 145)",
-          "oklch(81% 0.008 145)",
-          "oklch(95% 0.008 145)"
-        ],
-        "rampPurpose": "Synthesized preview ramp; these steps are not shipped CSS tokens."
+          "oklch(15% 0.00824 91.48)",
+          "oklch(26% 0.00824 91.48)",
+          "oklch(37% 0.00824 91.48)",
+          "oklch(48% 0.00824 91.48)",
+          "oklch(59% 0.00824 91.48)",
+          "oklch(70% 0.00824 91.48)",
+          "oklch(81% 0.00824 91.48)",
+          "oklch(95% 0.00824 91.48)"
+        ]
       },
-      "surface": {
+      "paper-deep": {
         "role": "neutral",
-        "displayName": "Raised tonal surface",
+        "displayName": "Deep paper",
         "tonalRamp": [
-          "oklch(15% 0.008 145)",
-          "oklch(26% 0.008 145)",
-          "oklch(37% 0.008 145)",
-          "oklch(48% 0.008 145)",
-          "oklch(59% 0.008 145)",
-          "oklch(70% 0.008 145)",
-          "oklch(81% 0.008 145)",
-          "oklch(95% 0.008 145)"
-        ],
-        "rampPurpose": "Synthesized preview ramp; these steps are not shipped CSS tokens."
+          "oklch(15% 0.00960 93.57)",
+          "oklch(26% 0.00960 93.57)",
+          "oklch(37% 0.00960 93.57)",
+          "oklch(48% 0.00960 93.57)",
+          "oklch(59% 0.00960 93.57)",
+          "oklch(70% 0.00960 93.57)",
+          "oklch(81% 0.00960 93.57)",
+          "oklch(95% 0.00960 93.57)"
+        ]
       },
-      "white": {
+      "ink": {
         "role": "neutral",
-        "displayName": "White ink",
+        "displayName": "Blue-gray ink",
         "tonalRamp": [
-          "oklch(15% 0.008 145)",
-          "oklch(26% 0.008 145)",
-          "oklch(37% 0.008 145)",
-          "oklch(48% 0.008 145)",
-          "oklch(59% 0.008 145)",
-          "oklch(70% 0.008 145)",
-          "oklch(81% 0.008 145)",
-          "oklch(95% 0.008 145)"
-        ],
-        "rampPurpose": "Synthesized preview ramp; these steps are not shipped CSS tokens."
+          "oklch(15% 0.01401 203.89)",
+          "oklch(26% 0.01401 203.89)",
+          "oklch(37% 0.01401 203.89)",
+          "oklch(48% 0.01401 203.89)",
+          "oklch(59% 0.01401 203.89)",
+          "oklch(70% 0.01401 203.89)",
+          "oklch(81% 0.01401 203.89)",
+          "oklch(95% 0.01401 203.89)"
+        ]
       },
       "muted": {
         "role": "neutral",
-        "displayName": "Muted caption ink",
+        "displayName": "Muted ink",
         "tonalRamp": [
-          "oklch(15% 0.008 145)",
-          "oklch(26% 0.008 145)",
-          "oklch(37% 0.008 145)",
-          "oklch(48% 0.008 145)",
-          "oklch(59% 0.008 145)",
-          "oklch(70% 0.008 145)",
-          "oklch(81% 0.008 145)",
-          "oklch(95% 0.008 145)"
-        ],
-        "rampPurpose": "Synthesized preview ramp; these steps are not shipped CSS tokens."
+          "oklch(15% 0.01428 215.92)",
+          "oklch(26% 0.01428 215.92)",
+          "oklch(37% 0.01428 215.92)",
+          "oklch(48% 0.01428 215.92)",
+          "oklch(59% 0.01428 215.92)",
+          "oklch(70% 0.01428 215.92)",
+          "oklch(81% 0.01428 215.92)",
+          "oklch(95% 0.01428 215.92)"
+        ]
       },
-      "mint": {
-        "role": "primary",
-        "displayName": "Mint action",
-        "tonalRamp": [
-          "oklch(15% 0.16 145)",
-          "oklch(26% 0.16 145)",
-          "oklch(37% 0.16 145)",
-          "oklch(48% 0.16 145)",
-          "oklch(59% 0.16 145)",
-          "oklch(70% 0.16 145)",
-          "oklch(81% 0.16 145)",
-          "oklch(95% 0.16 145)"
-        ],
-        "rampPurpose": "Synthesized preview ramp; these steps are not shipped CSS tokens."
-      },
-      "black": {
+      "line": {
         "role": "neutral",
-        "displayName": "Black media stage",
+        "displayName": "Paper rule",
         "tonalRamp": [
-          "oklch(15% 0.008 145)",
-          "oklch(26% 0.008 145)",
-          "oklch(37% 0.008 145)",
-          "oklch(48% 0.008 145)",
-          "oklch(59% 0.008 145)",
-          "oklch(70% 0.008 145)",
-          "oklch(81% 0.008 145)",
-          "oklch(95% 0.008 145)"
-        ],
-        "rampPurpose": "Synthesized preview ramp; these steps are not shipped CSS tokens."
+          "oklch(15% 0.00765 151.87)",
+          "oklch(26% 0.00765 151.87)",
+          "oklch(37% 0.00765 151.87)",
+          "oklch(48% 0.00765 151.87)",
+          "oklch(59% 0.00765 151.87)",
+          "oklch(70% 0.00765 151.87)",
+          "oklch(81% 0.00765 151.87)",
+          "oklch(95% 0.00765 151.87)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Blueprint blue",
+        "tonalRamp": [
+          "oklch(15% 0.07496 239.31)",
+          "oklch(26% 0.07496 239.31)",
+          "oklch(37% 0.07496 239.31)",
+          "oklch(48% 0.07496 239.31)",
+          "oklch(59% 0.07496 239.31)",
+          "oklch(70% 0.07496 239.31)",
+          "oklch(81% 0.07496 239.31)",
+          "oklch(95% 0.07496 239.31)"
+        ]
+      },
+      "accent-soft": {
+        "role": "primary",
+        "displayName": "Soft blueprint blue",
+        "tonalRamp": [
+          "oklch(15% 0.01199 223.53)",
+          "oklch(26% 0.01199 223.53)",
+          "oklch(37% 0.01199 223.53)",
+          "oklch(48% 0.01199 223.53)",
+          "oklch(59% 0.01199 223.53)",
+          "oklch(70% 0.01199 223.53)",
+          "oklch(81% 0.01199 223.53)",
+          "oklch(95% 0.01199 223.53)"
+        ]
+      },
+      "amber": {
+        "role": "secondary",
+        "displayName": "Pending amber",
+        "tonalRamp": [
+          "oklch(15% 0.09168 67.02)",
+          "oklch(26% 0.09168 67.02)",
+          "oklch(37% 0.09168 67.02)",
+          "oklch(48% 0.09168 67.02)",
+          "oklch(59% 0.09168 67.02)",
+          "oklch(70% 0.09168 67.02)",
+          "oklch(81% 0.09168 67.02)",
+          "oklch(95% 0.09168 67.02)"
+        ]
+      },
+      "amber-soft": {
+        "role": "secondary",
+        "displayName": "Soft amber",
+        "tonalRamp": [
+          "oklch(15% 0.02751 83.54)",
+          "oklch(26% 0.02751 83.54)",
+          "oklch(37% 0.02751 83.54)",
+          "oklch(48% 0.02751 83.54)",
+          "oklch(59% 0.02751 83.54)",
+          "oklch(70% 0.02751 83.54)",
+          "oklch(81% 0.02751 83.54)",
+          "oklch(95% 0.02751 83.54)"
+        ]
+      },
+      "night": {
+        "role": "neutral",
+        "displayName": "Midnight",
+        "tonalRamp": [
+          "oklch(15% 0.02400 251.59)",
+          "oklch(26% 0.02400 251.59)",
+          "oklch(37% 0.02400 251.59)",
+          "oklch(48% 0.02400 251.59)",
+          "oklch(59% 0.02400 251.59)",
+          "oklch(70% 0.02400 251.59)",
+          "oklch(81% 0.02400 251.59)",
+          "oklch(95% 0.02400 251.59)"
+        ]
+      },
+      "night-soft": {
+        "role": "neutral",
+        "displayName": "Midnight surface",
+        "tonalRamp": [
+          "oklch(15% 0.02814 248.94)",
+          "oklch(26% 0.02814 248.94)",
+          "oklch(37% 0.02814 248.94)",
+          "oklch(48% 0.02814 248.94)",
+          "oklch(59% 0.02814 248.94)",
+          "oklch(70% 0.02814 248.94)",
+          "oklch(81% 0.02814 248.94)",
+          "oklch(95% 0.02814 248.94)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Warm white ink",
+        "tonalRamp": [
+          "oklch(15% 0.00670 97.35)",
+          "oklch(26% 0.00670 97.35)",
+          "oklch(37% 0.00670 97.35)",
+          "oklch(48% 0.00670 97.35)",
+          "oklch(59% 0.00670 97.35)",
+          "oklch(70% 0.00670 97.35)",
+          "oklch(81% 0.00670 97.35)",
+          "oklch(95% 0.00670 97.35)"
+        ]
+      },
+      "night-muted": {
+        "role": "neutral",
+        "displayName": "Midnight secondary ink",
+        "tonalRamp": [
+          "oklch(15% 0.02258 239.50)",
+          "oklch(26% 0.02258 239.50)",
+          "oklch(37% 0.02258 239.50)",
+          "oklch(48% 0.02258 239.50)",
+          "oklch(59% 0.02258 239.50)",
+          "oklch(70% 0.02258 239.50)",
+          "oklch(81% 0.02258 239.50)",
+          "oklch(95% 0.02258 239.50)"
+        ]
+      },
+      "night-line": {
+        "role": "neutral",
+        "displayName": "Midnight rule",
+        "tonalRamp": [
+          "oklch(15% 0.02467 246.19)",
+          "oklch(26% 0.02467 246.19)",
+          "oklch(37% 0.02467 246.19)",
+          "oklch(48% 0.02467 246.19)",
+          "oklch(59% 0.02467 246.19)",
+          "oklch(70% 0.02467 246.19)",
+          "oklch(81% 0.02467 246.19)",
+          "oklch(95% 0.02467 246.19)"
+        ]
+      },
+      "dark-accent": {
+        "role": "primary",
+        "displayName": "Light blueprint blue",
+        "tonalRamp": [
+          "oklch(15% 0.05274 236.01)",
+          "oklch(26% 0.05274 236.01)",
+          "oklch(37% 0.05274 236.01)",
+          "oklch(48% 0.05274 236.01)",
+          "oklch(59% 0.05274 236.01)",
+          "oklch(70% 0.05274 236.01)",
+          "oklch(81% 0.05274 236.01)",
+          "oklch(95% 0.05274 236.01)"
+        ]
+      },
+      "dark-accent-soft": {
+        "role": "primary",
+        "displayName": "Dark blueprint surface",
+        "tonalRamp": [
+          "oklch(15% 0.03961 240.95)",
+          "oklch(26% 0.03961 240.95)",
+          "oklch(37% 0.03961 240.95)",
+          "oklch(48% 0.03961 240.95)",
+          "oklch(59% 0.03961 240.95)",
+          "oklch(70% 0.03961 240.95)",
+          "oklch(81% 0.03961 240.95)",
+          "oklch(95% 0.03961 240.95)"
+        ]
+      },
+      "dark-amber": {
+        "role": "secondary",
+        "displayName": "Light pending amber",
+        "tonalRamp": [
+          "oklch(15% 0.09161 77.91)",
+          "oklch(26% 0.09161 77.91)",
+          "oklch(37% 0.09161 77.91)",
+          "oklch(48% 0.09161 77.91)",
+          "oklch(59% 0.09161 77.91)",
+          "oklch(70% 0.09161 77.91)",
+          "oklch(81% 0.09161 77.91)",
+          "oklch(95% 0.09161 77.91)"
+        ]
+      },
+      "dark-amber-soft": {
+        "role": "secondary",
+        "displayName": "Dark amber surface",
+        "tonalRamp": [
+          "oklch(15% 0.02623 73.91)",
+          "oklch(26% 0.02623 73.91)",
+          "oklch(37% 0.02623 73.91)",
+          "oklch(48% 0.02623 73.91)",
+          "oklch(59% 0.02623 73.91)",
+          "oklch(70% 0.02623 73.91)",
+          "oklch(81% 0.02623 73.91)",
+          "oklch(95% 0.02623 73.91)"
+        ]
       }
     },
     "typographyMeta": {
       "display": {
-        "displayName": "Display",
-        "purpose": "Large editorial opening headings."
+        "displayName": "Hero display",
+        "purpose": "Homepage hero heading; responsive overrides are recorded in DESIGN.md."
       },
       "headline": {
-        "displayName": "Headline",
-        "purpose": "Section headings."
+        "displayName": "Page headline",
+        "purpose": "Base page and detail heading."
+      },
+      "section": {
+        "displayName": "Section heading",
+        "purpose": "Base second-level editorial heading."
       },
       "title": {
         "displayName": "Title",
-        "purpose": "Project and evidence titles."
+        "purpose": "Base third-level heading; cards carry contextual overrides."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Sustained reading; maximum measure 68ch."
+        "purpose": "General reading text and interface inheritance."
+      },
+      "reading": {
+        "displayName": "Reading prose",
+        "purpose": "Long-form paragraph rhythm at a maximum 68ch measure."
+      },
+      "control": {
+        "displayName": "Primary control",
+        "purpose": "Medium-weight primary and hero action text."
       },
       "label": {
-        "displayName": "Label",
-        "purpose": "Captions and interface context."
+        "displayName": "Technical label",
+        "purpose": "Mono identifiers and data; small metadata often remains sans-serif."
       }
     },
     "shadows": [],
     "motion": [
       {
-        "name": "duration",
-        "value": "240ms",
-        "purpose": "Action and disclosure state transitions."
+        "name": "control-duration",
+        "value": "220ms",
+        "purpose": "Shared action and directional-icon transitions."
       },
       {
-        "name": "entrance",
-        "value": "700ms",
-        "purpose": "Section entrance."
+        "name": "transform-ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Control transforms, image scaling, and hero entry."
       },
       {
-        "name": "ease",
-        "value": "cubic-bezier(.16,1,.3,1)",
-        "purpose": "Action and entrance easing."
+        "name": "image-hover",
+        "value": "650ms",
+        "purpose": "Linked media scales to 1.035."
       },
       {
-        "name": "artifact-drift",
-        "value": "16s ease-in-out infinite alternate",
-        "purpose": "Honeycomb stage scale from 1 to 1.035; disabled for reduced motion."
+        "name": "hero-arrival",
+        "value": "850ms",
+        "purpose": "Hero copy moves from translateY(14px) and opacity 0.65 to its final state."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none !important; transition: none !important; scroll-behavior: auto",
+        "purpose": "Applied when reduced motion is requested; hover transforms still apply immediately."
       }
     ],
     "breakpoints": [
       {
-        "name": "compact-desktop",
-        "value": "64rem"
+        "name": "wide-hero-min",
+        "value": "1600px"
       },
       {
-        "name": "stacked",
-        "value": "48rem"
+        "name": "compact-max",
+        "value": "1100px"
       },
       {
-        "name": "narrow",
-        "value": "24rem"
+        "name": "menu-and-tablet-max",
+        "value": "900px"
+      },
+      {
+        "name": "mobile-max",
+        "value": "650px"
       }
-    ],
-    "focus": {
-      "width": "3px",
-      "offset": "5px",
-      "colorToken": "mint"
-    },
-    "layout": {
-      "maxWidth": "100rem",
-      "measure": "68ch",
-      "targetSize": "48px"
-    }
+    ]
   },
   "components": [
     {
       "name": "Primary action",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Mint action shared by project and optional CubeSat controls.",
-      "html": "<button class=\"ds-primary\">Explore the project <svg class=\"ds-arrow\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></button>",
-      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:space-between;gap:1.5rem;min-height:48px;background:var(--accent,#a7ff9c);color:var(--accent-ink,#161a18);padding:1rem 1.5rem;font:600 .9375rem/1.4 'Libre Franklin',sans-serif;border:0;border-radius:0;cursor:pointer;transition:transform 240ms cubic-bezier(.16,1,.3,1)}.ds-primary:hover{transform:translateY(-3px)}.ds-primary:active{transform:translateY(2px)}.ds-primary:focus-visible{outline:3px solid var(--accent,#a7ff9c);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}.ds-arrow{width:24px;height:24px;stroke:currentColor;stroke-width:1.5;fill:none}"
+      "description": "Accent action for the current reading mode; actual behavior comes from the production page.",
+      "html": "<button type=\"button\" class=\"ds-button-primary\">Reset filters</button>",
+      "css": ".ds-button-primary{display:inline-flex;align-items:center;justify-content:space-between;gap:1.5rem;min-height:48px;padding:.9rem 1.4rem;background:var(--accent,#2c5e7e);color:var(--bg,#f5f3ed);font:500 .88rem/1.65 var(--font-body,'IBM Plex Sans',Arial,sans-serif);text-decoration:none;border:1px solid transparent;border-radius:0;cursor:pointer;transition:background var(--duration,220ms),transform var(--duration,220ms) var(--ease,cubic-bezier(.16,1,.3,1))}.ds-button-primary:hover{transform:translateY(-2px)}.ds-button-primary:focus-visible{outline:2px solid var(--accent,#2c5e7e);outline-offset:5px}.ds-icon{width:20px;height:20px;flex-shrink:0;stroke:currentColor;stroke-width:1.5;fill:none;transition:transform var(--duration,220ms) var(--ease,cubic-bezier(.16,1,.3,1))}.ds-button-primary:hover .ds-icon{transform:translateX(2px)}@media(prefers-reduced-motion:reduce){.ds-button-primary,.ds-icon{transition:none}}"
+    },
+    {
+      "name": "Light hero action",
+      "kind": "button",
+      "refersTo": "button-light",
+      "description": "Filled action using the current mode; light variant belongs on dark hero imagery.",
+      "html": "<a class=\"ds-button-light\" href=\"#projects\">Explore the laboratory <svg class=\"ds-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></a>",
+      "css": ".ds-button-light{display:inline-flex;align-items:center;justify-content:space-between;gap:1.5rem;min-height:48px;padding:.9rem 1.4rem;background:var(--white,#f8f7f2);color:var(--night,#101923);font:500 .88rem/1.65 var(--font-body,'IBM Plex Sans',Arial,sans-serif);text-decoration:none;border:1px solid transparent;border-radius:0;cursor:pointer;transition:background var(--duration,220ms),transform var(--duration,220ms) var(--ease,cubic-bezier(.16,1,.3,1))}.ds-button-light:hover{transform:translateY(-2px)}.ds-button-light:focus-visible{outline:2px solid var(--accent,#2c5e7e);outline-offset:5px}.ds-icon{width:20px;height:20px;flex-shrink:0;stroke:currentColor;stroke-width:1.5;fill:none;transition:transform var(--duration,220ms) var(--ease,cubic-bezier(.16,1,.3,1))}.ds-button-light:hover .ds-icon{transform:translateX(2px)}@media(prefers-reduced-motion:reduce){.ds-button-light,.ds-icon{transition:none}}"
     },
     {
       "name": "Quiet action",
       "kind": "button",
       "refersTo": "button-quiet",
-      "description": "Underlined secondary action for closing the optional scene.",
-      "html": "<button class=\"ds-quiet\">Close 3D view</button>",
-      "css": ".ds-quiet{min-height:48px;padding:1rem 0;border:0;border-radius:0;background:transparent;color:var(--ink,#f4f6f2);font:.9375rem/1.6 'Libre Franklin',sans-serif;text-decoration:underline;text-underline-offset:.25em;cursor:pointer}.ds-quiet:hover{text-decoration-color:var(--accent,#a7ff9c)}.ds-quiet:active{transform:translateY(2px)}.ds-quiet:focus-visible{outline:3px solid var(--accent,#a7ff9c);outline-offset:5px}"
+      "description": "Underlined secondary control used for filters and printing.",
+      "html": "<button type=\"button\" class=\"ds-quiet\">Reset</button>",
+      "css": ".ds-quiet{padding:.65rem .8rem;min-height:44px;background:transparent;color:var(--text,#202a2b);border:0;font:.875rem/1.65 var(--font-body,'IBM Plex Sans',Arial,sans-serif);text-decoration:underline;text-underline-offset:.3em;cursor:pointer}.ds-quiet:focus-visible{outline:2px solid var(--accent,#2c5e7e);outline-offset:5px}"
     },
     {
-      "name": "Navigation",
+      "name": "Collection search",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "Transparent search within a ruled collection filter bar.",
+      "html": "<div class=\"ds-filter\"><label class=\"ds-search\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"10\" cy=\"10\" r=\"6\"/><path d=\"m15 15 5 5\"/></svg><span class=\"ds-sr\">Search notebook</span><input type=\"search\" placeholder=\"Search notebook…\" autocomplete=\"off\"></label></div>",
+      "css": ".ds-filter{border-block:1px solid var(--border,#d3d8d4);padding-block:1.3rem}.ds-search{display:flex;align-items:center;gap:.6rem;color:var(--muted,#5e696c);min-width:0}.ds-search input{background:transparent;color:inherit;border:0;min-height:44px;min-width:0;width:100%;font:.87rem/1.65 var(--font-body,'IBM Plex Sans',Arial,sans-serif);caret-color:var(--accent,#2c5e7e)}.ds-search input::placeholder{color:var(--muted,#5e696c);opacity:1}.ds-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.ds-search input:focus-visible{outline:2px solid var(--accent,#2c5e7e);outline-offset:5px}.ds-icon{width:20px;height:20px;flex-shrink:0;stroke:currentColor;stroke-width:1.5;fill:none;transition:transform var(--duration,220ms) var(--ease,cubic-bezier(.16,1,.3,1))}"
+    },
+    {
+      "name": "Primary navigation",
       "kind": "nav",
-      "description": "Wrapping text links with mint hover and visible focus.",
-      "html": "<nav class=\"ds-nav\" aria-label=\"Preview navigation\"><a href=\"#work\">Work</a><a href=\"#cubesat\">CubeSat</a><a href=\"#about\">Our story</a></nav>",
-      "css": ".ds-nav{display:flex;flex-wrap:wrap;gap:2rem;font:.9375rem/1.6 'Libre Franklin',sans-serif;color:var(--ink,#f4f6f2)}.ds-nav a{display:inline-flex;align-items:center;min-height:48px;color:inherit;text-decoration:none}.ds-nav a:hover{color:var(--accent,#a7ff9c)}.ds-nav a:focus-visible{outline:3px solid var(--accent,#a7ff9c);outline-offset:5px}@media(max-width:64rem){.ds-nav{gap:1rem}}"
+      "refersTo": "navigation",
+      "description": "Visible conventional links; the actual responsive menu is supplied by production scripts.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Preview navigation\"><a href=\"#home\">Home</a><a href=\"#projects\" aria-current=\"page\">Projects</a><a href=\"#research\">Research</a><a href=\"#notebook\">Notebook</a><a href=\"#explorations\">Explorations</a><a href=\"#about\">About</a></nav>",
+      "css": ".ds-nav{display:flex;gap:clamp(.9rem,1.8vw,2rem);align-items:center;color:var(--text,#202a2b);font-family:var(--font-body,'IBM Plex Sans',Arial,sans-serif)}.ds-nav a{min-height:44px;display:flex;align-items:center;font-size:.85rem;line-height:1.65;text-decoration:none;position:relative;color:inherit}.ds-nav a[aria-current]::after{content:\"\";height:2px;background:var(--accent,#2c5e7e);position:absolute;bottom:3px;left:0;right:0}.ds-nav a:hover{color:var(--accent,#2c5e7e)}.ds-nav a:focus-visible{outline:2px solid var(--accent,#2c5e7e);outline-offset:5px}@media(max-width:650px){.ds-nav{flex-wrap:wrap;gap:.3rem 1.7rem;padding-block:.7rem}.ds-nav a{font-size:.9rem}}"
     },
     {
-      "name": "Artifact tab",
+      "name": "Metadata tags",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Small outlined metadata; linked tags retain normal keyboard focus.",
+      "html": "<div class=\"ds-tags\"><span>Fabrication</span><a href=\"#source\">Source files</a></div>",
+      "css": ".ds-tags{display:flex;flex-wrap:wrap;gap:.5rem;font-family:var(--font-body,'IBM Plex Sans',Arial,sans-serif)}.ds-tags span,.ds-tags a{display:inline-block;font-size:.7rem;line-height:1.65;border:1px solid var(--border,#d3d8d4);padding:.28rem .6rem;text-decoration:none;border-radius:2px;color:var(--muted,#5e696c)}.ds-tags a{min-height:32px;display:flex;align-items:center}.ds-tags a:focus-visible{outline:2px solid var(--accent,#2c5e7e);outline-offset:5px}"
+    },
+    {
+      "name": "Notebook row",
+      "kind": "card",
+      "refersTo": "notebook-row",
+      "description": "Dated editorial record with source-oriented metadata and a linked title.",
+      "html": "<article class=\"ds-note\"><div class=\"ds-date\"><span>N° 01</span><time datetime=\"2026-10-13\">13 Oct 2026</time></div><div><div class=\"ds-meta\">Build log · Wind tunnel</div><h2><a href=\"#note\">The stand, in progress.</a></h2><p>Design decisions and questions still unresolved.</p></div><a class=\"ds-row-arrow\" href=\"#note\" aria-label=\"Read the stand note\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></a></article>",
+      "css": ".ds-note{display:grid;grid-template-columns:100px 1fr 24px;gap:1.6rem;padding-block:1.8rem;border-top:1px solid var(--border,#d3d8d4);color:var(--text,#202a2b);font-family:var(--font-body,'IBM Plex Sans',Arial,sans-serif)}.ds-date{font-size:.7rem;color:var(--muted,#5e696c)}.ds-date span{display:block;color:var(--accent,#2c5e7e);font-family:var(--font-mono,'IBM Plex Mono',monospace);margin-bottom:.4rem}.ds-meta{font-size:.7rem;color:var(--muted,#5e696c);margin-bottom:.7rem}.ds-note h2{margin:0;font:400 1.75rem/1.12 var(--font-display,'Newsreader',Georgia,serif);letter-spacing:-.025em}.ds-note h2 a{color:inherit;text-decoration:none}.ds-note p{margin:.55rem 0 0;font-size:.82rem;line-height:1.65;color:var(--muted,#5e696c)}.ds-row-arrow{display:flex;align-items:center;justify-content:center;align-self:center;width:44px;height:44px;margin-left:-10px;color:inherit}.ds-row-arrow:hover .ds-icon{transform:translateX(2px)}.ds-note a:focus-visible{outline:2px solid var(--accent,#2c5e7e);outline-offset:5px}.ds-icon{width:20px;height:20px;flex-shrink:0;stroke:currentColor;stroke-width:1.5;fill:none;transition:transform var(--duration,220ms) var(--ease,cubic-bezier(.16,1,.3,1))}@media(max-width:650px){.ds-note{grid-template-columns:1fr 24px;gap:.75rem}.ds-date{grid-column:1/-1;display:flex;gap:1rem}.ds-date span{margin:0}.ds-note h2{font-size:1.85rem}.ds-note p{font-size:.85rem}}@media(prefers-reduced-motion:reduce){.ds-icon{transition:none}}"
+    },
+    {
+      "name": "Question panel",
+      "kind": "card",
+      "refersTo": "question-panel",
+      "description": "Flat secondary surface that keeps an engineering question beside its context.",
+      "html": "<aside class=\"ds-question\"><h2>The question</h2><p>How can a useful measurement begin with a better stand?</p><dl><dt>Status</dt><dd>In progress</dd><dt>Next step</dt><dd>Calibration work</dd></dl></aside>",
+      "css": ".ds-question{padding:2rem;background:var(--surface,#ebe9e2);color:var(--text,#202a2b);font-family:var(--font-body,'IBM Plex Sans',Arial,sans-serif)}.ds-question h2{margin:0;font:400 .75rem/1.12 var(--font-body,'IBM Plex Sans',Arial,sans-serif);letter-spacing:0}.ds-question>p{margin:1.2rem 0 0;font:400 1.9rem/1.3 var(--font-display,'Newsreader',Georgia,serif)}.ds-question dl{margin:1.7rem 0 0;font-size:.8rem;line-height:1.65}.ds-question dt{color:var(--muted,#5e696c);margin-top:1rem;font-size:.7rem}.ds-question dd{margin:0}@media(max-width:900px){.ds-question{padding:1.5rem}.ds-question>p{font-size:1.6rem}}"
+    },
+    {
+      "name": "Technical disclosure",
+      "kind": "custom",
+      "refersTo": "technical-disclosure",
+      "description": "Native disclosure for an optional technical explanation; click and keyboard behavior are browser-native.",
+      "html": "<details class=\"ds-deep\"><summary>Technical detail<span>Inspect the method and its limitations</span></summary><p>A source trace describes fabrication geometry. Its effect on airflow requires a separate experiment.</p></details>",
+      "css": ".ds-deep{margin-top:2.5rem;border-block:1px solid var(--border,#d3d8d4);color:var(--text,#202a2b);font:1rem/1.8 var(--font-body,'IBM Plex Sans',Arial,sans-serif)}.ds-deep>summary{padding:1.2rem 0;font-size:1rem;color:var(--accent,#2c5e7e);cursor:pointer}.ds-deep>summary span{display:block;font-size:.75rem;margin-left:1.15rem;color:var(--muted,#5e696c)}.ds-deep[open]{padding-bottom:1.5rem}.ds-deep p{margin:1rem 0;max-width:68ch}.ds-deep>summary:focus-visible{outline:2px solid var(--accent,#2c5e7e);outline-offset:5px}"
+    },
+    {
+      "name": "Artifact tabs",
       "kind": "custom",
       "refersTo": "artifact-tab",
-      "description": "Flat artifact selector; mint identifies its selected state.",
-      "html": "<div class=\"ds-tabs\" role=\"tablist\" aria-label=\"Artifact preview\"><button role=\"tab\" aria-selected=\"true\">Toolpath</button><button role=\"tab\" aria-selected=\"false\">Holder</button></div>",
-      "css": ".ds-tabs{display:flex;flex-wrap:wrap;gap:.5rem}.ds-tabs button{padding:1rem 1.5rem;min-height:48px;border:0;border-radius:0;background:var(--surface,#202622);color:var(--ink,#f4f6f2);font:.9375rem/1.5 'Libre Franklin',sans-serif;cursor:pointer}.ds-tabs button[aria-selected=true]{background:var(--accent,#a7ff9c);color:var(--accent-ink,#161a18)}.ds-tabs button:hover{transform:translateY(-2px)}.ds-tabs button:active{transform:translateY(2px)}.ds-tabs button:focus-visible{outline:3px solid var(--accent,#a7ff9c);outline-offset:5px}"
-    },
-    {
-      "name": "Evidence row",
-      "kind": "card",
-      "refersTo": "evidence-row",
-      "description": "A source index entry with title, status, and directional mark.",
-      "html": "<a class=\"ds-evidence\" href=\"#acquisition\"><span><strong>Firmware &amp; acquisition</strong><small>Arduino / Source available</small></span><svg class=\"ds-arrow\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 5 19 19M5 19h14V5\"/></svg></a>",
-      "css": ".ds-evidence{display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:1.5rem;background:var(--surface,#202622);color:var(--ink,#f4f6f2);text-decoration:none;border-radius:0}.ds-evidence strong{display:block;font:600 clamp(1.375rem,2.1vw,2rem)/1.2 'Libre Franklin',sans-serif}.ds-evidence small{display:block;margin-top:.5rem;color:var(--muted,#b9c3bb);font:.9375rem/1.6 'Libre Franklin',sans-serif}.ds-evidence:hover{background:var(--black,#101411)}.ds-evidence:focus-visible{outline:3px solid var(--accent,#a7ff9c);outline-offset:5px}.ds-arrow{width:20px;height:20px;flex-shrink:0;stroke:currentColor;stroke-width:1.5;fill:none}"
+      "description": "Selected and resting tab appearance; this static sample does not replace production keyboard logic.",
+      "html": "<div class=\"ds-tabs\" role=\"tablist\" aria-label=\"Artifact preview\"><button type=\"button\" role=\"tab\" aria-selected=\"true\">Toolpath</button><button type=\"button\" role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Holder</button><button type=\"button\" role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Honeycomb</button></div>",
+      "css": ".ds-tabs{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:1.5rem}.ds-tabs button{padding:.7rem 1rem;min-height:44px;background:var(--surface,#ebe9e2);color:var(--text,#202a2b);border:0;border-radius:0;font:.8rem/1.65 var(--font-body,'IBM Plex Sans',Arial,sans-serif);cursor:pointer}.ds-tabs button[aria-selected=true]{background:var(--accent,#2c5e7e);color:var(--bg,#f5f3ed)}.ds-tabs button:focus-visible{outline:2px solid var(--accent,#2c5e7e);outline-offset:5px}"
     }
   ],
   "narrative": {
-    "northStar": "The Research Fieldbook",
-    "overview": "A dark editorial portfolio gives technical artifacts the space and clarity of a publication. Strong sans-serif headings establish hierarchy; serif paragraphs support sustained reading. The selected darker concept uses graphite, white ink, and mint actions.",
+    "northStar": "The Engineering Fieldbook",
+    "overview": "AeroAspirant pairs the patient clarity of a scientific notebook with the scale of an aerospace image archive. Warm off-white reading surfaces, fine rules, and editorial serif headings make technical work approachable. Midnight exploration surfaces give authentic imagery room to lead; restrained blueprint blue marks interaction and amber identifies pending work.\n\nThe system is an open record of engineering in progress. Source captions, dates, limitations, and selectable technical content belong within the visual hierarchy. Conventional navigation and progressive enhancement keep the fieldbook usable alongside its immersive imagery.",
     "keyCharacteristics": [
-      "Broad, flat media stages.",
-      "Bold headings with readable serif prose.",
-      "Square actions and restrained mint emphasis.",
-      "Source captions that distinguish evidence from illustration."
+      "Warm paper reading surfaces and midnight exploration surfaces.",
+      "Newsreader headings, IBM Plex Sans prose, and IBM Plex Mono data.",
+      "Flat editorial layouts with fine rules and varied image proportions.",
+      "Visible navigation, source credits, and explicit work-in-progress status.",
+      "Responsive reading layouts with keyboard focus and reduced-motion support."
     ],
-    "rules": [
-      {
-        "name": "The Evidence Rule",
-        "body": "Color indicates interface state, never scientific validity or a completed result.",
-        "section": "colors"
-      },
-      {
-        "name": "The Flat Surface Rule",
-        "body": "Preserve tonal separation and square geometry rather than adding shadows.",
-        "section": "elevation"
-      }
-    ],
+    "rules": [],
     "dos": [
-      "Do use the graphite ground, white ink, and mint interaction palette.",
-      "Do preserve readable serif prose and clear sans-serif hierarchy.",
-      "Do caption source artifacts and explanatory illustrations accurately.",
-      "Do retain keyboard focus, wrapping layouts, and reduced-motion behavior."
+      "Do retain warm paper reading surfaces, midnight exploration surfaces, blueprint blue interaction, and amber pending states.",
+      "Do preserve Newsreader hierarchy, Plex Sans reading text, and Plex Mono technical notation.",
+      "Do keep source credits, factual captions, dates, and limitations close to the material they describe.",
+      "Do retain visible navigation, meaningful labels, keyboard focus, responsive reflow, and reduced-motion support.",
+      "Do preserve complete static content and enhance it with small, optional browser interactions."
     ],
     "donts": [
-      "Don't add rounded cards, drop shadows, or a blocking opening sequence.",
-      "Don't present generated concepts as photographs, hardware, or research evidence.",
-      "Don't obscure unfinished calibration or the exploratory status of CubeSat work."
+      "Don't add raised card shadows or turn metadata tags into rounded promotional pills.",
+      "Don't replace conventional navigation with an immersive or blocking entry sequence.",
+      "Don't present archive imagery, diagrams, or source-file traces as student hardware photographs or measured results.",
+      "Don't hide unfinished calibration, exploratory work, missing documents, or source limitations behind visual polish.",
+      "Don't describe this source-derived documentation as a screenshot review, a browser-computed audit, or an approved visual comp."
     ]
   }
 }

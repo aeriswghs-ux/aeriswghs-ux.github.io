@@ -47,7 +47,7 @@ export const math = (source: string, displayMode = false): string =>
   });
 const md = new MarkdownIt({ html: false, linkify: false, typographer: true });
 md.renderer.rules.table_open = () =>
-  '<div class="table-scroll" tabindex="0" role="region" aria-label="Notebook data table"><table>';
+  '<div class="table-scroll" tabindex="0" role="region" aria-label="Data table"><table>';
 md.renderer.rules.table_close = () => "</table></div>";
 md.inline.ruler.after("escape", "math", (state, silent) => {
   if (state.src[state.pos] !== "$") return false;

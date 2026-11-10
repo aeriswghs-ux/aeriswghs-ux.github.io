@@ -28,10 +28,10 @@ export function layout({
   home?: boolean;
 }): string {
   return `<!doctype html><html lang="en" data-default-theme="${dark ? "dark" : "light"}"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="${home ? "#F7F8F6" : dark ? "#101923" : "#f5f3ed"}">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="${dark ? "#0f0e12" : "#f0efe9"}">
 <title>${esc(title)} · AeroAspirant</title><meta name="description" content="${esc(description)}">
 <meta property="og:title" content="${esc(title)} · The Engineering Fieldbook"><meta property="og:description" content="${esc(description)}"><meta property="og:type" content="website">
-<link rel="icon" href="${root}assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="${root}fonts.css"><link rel="stylesheet" href="${root}${home ? "home.css" : "styles.css"}">
+<link rel="icon" href="${root}assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="${root}fonts.css"><link rel="stylesheet" href="${root}${home ? "home.css" : "styles.css"}"><link rel="stylesheet" href="${root}theme.css">
 <script src="${root}theme.js"></script><script src="${root}script.js" defer></script></head>
 <body id="top" data-root="${root}"${home ? ' class="home"' : ""}><a class="skip-link" href="#main">Skip to content</a>
 <header class="masthead"><div class="wrap masthead-inner"><a class="brand" href="${root}index.html" aria-label="AeroAspirant home"><svg class="brand-mark" viewBox="0 0 36 36" width="34" height="34" aria-hidden="true"><path d="m8 29 10-23 10 23M12 21h12" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="18" cy="20" rx="17" ry="6" transform="rotate(-35 18 20)" fill="none" stroke="currentColor" stroke-width="1"/></svg><span>AeroAspirant<span class="brand-sub">The Engineering Fieldbook</span></span></a>

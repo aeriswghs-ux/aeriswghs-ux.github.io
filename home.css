@@ -18,6 +18,12 @@
   --font-display: "Newsreader", Georgia, serif;
   --font-body: "IBM Plex Sans", "Segoe UI", sans-serif;
   --font-mono: "IBM Plex Mono", Consolas, monospace;
+  --radius-control: 0.75rem;
+  --radius-media: 1rem;
+  --target-size: 2.75rem;
+  --material-header: rgb(247 248 246 / 88%);
+  --shadow-menu: 0 20px 48px rgb(18 24 27 / 12%);
+  --motion-feedback: 120ms;
   color-scheme: light;
 }
 *,
@@ -180,9 +186,12 @@ em {
 
 /* Masthead */
 .masthead {
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 30;
-  background: var(--color-ground);
+  background: var(--material-header);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
 }
 .masthead-inner {
   display: flex;
@@ -269,7 +278,7 @@ em {
 
 /* Hero */
 .hero {
-  padding: 32px 0 128px;
+  padding: 64px 0 96px;
 }
 .hero-grid {
   display: grid;
@@ -303,8 +312,9 @@ em {
   font-family: var(--font-display);
   font-size: clamp(64px, 7.8vw, 112px);
   font-weight: 400;
-  letter-spacing: -0.045em;
-  line-height: 0.91;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+  font-optical-sizing: auto;
 }
 .hero h1 .dot {
   color: var(--color-accent);
@@ -1979,6 +1989,96 @@ em {
   }
 }
 
+/* Paper refinement: comfortable controls and quiet, immediate feedback. */
+html {
+  scroll-padding-top: 7rem;
+}
+.button-primary,
+.icon-button,
+.plate-open,
+.row-arrow {
+  border-radius: var(--radius-control);
+  min-width: var(--target-size);
+  min-height: var(--target-size);
+  touch-action: manipulation;
+  transition: transform var(--motion-feedback) ease-out,
+    background var(--motion-feedback) ease-out,
+    color var(--motion-feedback) ease-out,
+    border-color var(--motion-feedback) ease-out;
+}
+.button-primary:active,
+.icon-button:active,
+a.plate-open:active,
+.note-row:active .row-arrow {
+  transform: scale(0.97);
+}
+.plate-frame {
+  border-radius: var(--radius-media);
+  aspect-ratio: 452 / 496;
+}
+.hero-eyebrow,
+.plate-meta,
+.plate-credit {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+}
+#primary-nav {
+  font-size: 0.875rem;
+}
+#primary-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-size);
+}
+.hero-secondary {
+  min-height: var(--target-size);
+}
+.note-row {
+  grid-template-columns: 86px minmax(0, 1fr) var(--target-size);
+}
+@media (max-width: 1100px) and (min-width: 901px) {
+  #primary-nav { gap: 18px; }
+  .masthead-inner { gap: 20px; }
+}
+@media (max-width: 900px) {
+  .masthead:has(#primary-nav.is-open) {
+    background: var(--color-ground);
+  }
+  #primary-nav {
+    max-height: calc(100dvh - 5rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 0.5rem 1rem 1rem;
+    border-radius: 0 0 var(--radius-media) var(--radius-media);
+    box-shadow: var(--shadow-menu);
+  }
+  #primary-nav a { border-radius: var(--radius-control); }
+  #primary-nav a[aria-current="page"] {
+    display: flex;
+    background: var(--color-accent-soft);
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+  html:not(.nav-enhanced) .masthead { position: relative; }
+  html:not(.nav-enhanced) .masthead-inner { flex-wrap: wrap; height: auto; padding-block: 1rem; }
+  html:not(.nav-enhanced) #primary-nav { position: static; order: 3; width: 100%; max-height: none; }
+}
+@media (max-width: 680px) {
+  .masthead-inner { gap: 12px; }
+  .hero-eyebrow { flex-wrap: wrap; row-gap: 0.5rem; }
+  .hero-eyebrow .rule.short { display: none; }
+  .hero-eyebrow span:last-child { width: 100%; padding-left: 2rem; }
+  .hero h1 { font-size: clamp(3rem, 17vw, 5rem); }
+  .note-row { grid-template-columns: minmax(0, 1fr) var(--target-size); }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .masthead { background: var(--color-ground); backdrop-filter: none; -webkit-backdrop-filter: none; }
+}
+@media (prefers-contrast: more) {
+  .masthead { background: var(--color-ground); border-bottom: 1px solid var(--color-ink); }
+  .icon-button, .plate-open, .row-arrow { border-color: var(--color-ink); }
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -1991,7 +2091,11 @@ em {
     animation-iteration-count: 1 !important;
   }
   .text-link:hover .icon,
-  .exploration-media:hover .exploration-img {
+  .exploration-media:hover .exploration-img,
+  .button-primary:active,
+  .icon-button:active,
+  a.plate-open:active,
+  .note-row:active .row-arrow {
     transform: none;
   }
 }

@@ -9,6 +9,7 @@ export function home(root: string): string {
   const wind = projects.find((p) => p.id === "wind-tunnel")!;
   const cubesat = projects.find((p) => p.id === "cubesat")!;
   const computing = projects.find((p) => p.id === "scientific-computing")!;
+  const latestNote = notebook[0];
   const solar = explorations.find((e) => e.id === "solar-arrays")!;
   const naca = explorations.find((e) => e.id === "wind-tunnel-history")!;
   const honeycomb = explorations.find((e) => e.id === "honeycomb")!;
@@ -37,7 +38,7 @@ export function home(root: string): string {
   const body = `<section class="hero">
 <div class="wrap hero-grid">
 <div class="hero-copy">
-<p class="hero-eyebrow"><span class="rule" aria-hidden="true"></span><span>A fieldbook in progress</span><span class="rule short" aria-hidden="true"></span><span>N° 05 / 2026</span></p>
+<p class="hero-eyebrow"><span class="rule" aria-hidden="true"></span><span>A fieldbook in progress</span><span class="rule short" aria-hidden="true"></span><span>N° 06 / 2026</span></p>
 <h1>Curiosity,<br><em>engineered<span class="dot">.</span></em></h1>
 <p class="hero-intro">An evolving fieldbook of aerospace engineering, experiments, and the process of turning questions into working systems.</p>
 <div class="hero-actions"><a class="button-primary" href="${root}projects/">Explore the laboratory ${arrow}</a><a class="hero-secondary" href="${root}notebook/">Open the research notebook ${external}</a></div>
@@ -50,7 +51,7 @@ export function home(root: string): string {
 </figure>
 </div>
 </section>
-<div class="field-strip"><div class="wrap field-strip-inner"><p class="strip-label"><span class="strip-rule" aria-hidden="true"></span>A fieldbook in progress</p><p class="strip-number">N° 05 / 2026</p><a class="strip-latest" href="${root}notebook/stand-in-progress/"><span class="strip-eyebrow">Latest note</span><span class="strip-title">A clearer flow. A new measurement stand.</span><time datetime="2026-10-13">13 Oct 2026</time><span class="strip-read">Read the note ${arrow}</span></a></div></div>
+<div class="field-strip"><div class="wrap field-strip-inner"><p class="strip-label"><span class="strip-rule" aria-hidden="true"></span>A fieldbook in progress</p><p class="strip-number">N° 06 / 2026</p><a class="strip-latest" href="${root}notebook/${latestNote.id}/"><span class="strip-eyebrow">Latest note</span><span class="strip-title">${esc(latestNote.title)}</span><time datetime="${latestNote.date}">${date(latestNote.date)}</time><span class="strip-read">Read the note ${arrow}</span></a></div></div>
 <section class="intro" id="about"><div class="wrap">
 <div class="eyebrow-row"><span>01 — Why this exists</span><span>An open record, not a showcase</span></div>
 <div class="intro-grid"><h2>Big questions.<br><em>Small, deliberate steps.</em></h2><div class="intro-copy"><p>We’re Rithwik and Rithika, siblings exploring engineering through building, questioning, and documenting. This is where the source files meet the unfinished ideas.</p><a class="text-link" href="${root}about/">Meet the people behind the fieldbook ${arrow}</a></div></div>
@@ -79,9 +80,9 @@ export function home(root: string): string {
 </div>
 </div></section>
 <section class="investigation" id="acquisition"><div class="wrap">
-<div class="investigation-head"><p class="live-label"><i aria-hidden="true"></i>Currently investigating</p><p class="investigation-meta">Measurement stand / 13 Oct 2026</p></div>
-<div class="investigation-grid"><div class="investigation-copy"><h2>A better stand.<br><em>A more useful measurement.</em></h2><p>The new stand brings differential pressure, lift and drag load cells, and a BME280 into the next stage of the tunnel. The airfoil mounting model is still taking shape.</p><a class="text-link light" href="${root}notebook/stand-in-progress/">Open the latest build log ${arrow}</a></div>
-<div class="ledger" aria-label="Measurement stand status"><div class="ledger-row"><span>Differential pressure</span><span class="ledger-status build">In build</span></div><div class="ledger-row"><span>Lift / drag load cells</span><span class="ledger-status calibrating">Calibrating</span></div><div class="ledger-row"><span>Airfoil mounting</span><span class="ledger-status planned">Planned</span></div><div class="ledger-row"><span>Data pipeline</span><span class="ledger-status planned">Sample input only</span></div><p class="ledger-note">Calibration not yet documented as complete.</p></div></div>
+<div class="investigation-head"><p class="live-label"><i aria-hidden="true"></i>Currently investigating</p><p class="investigation-meta">Research plan / 06 Nov 2026</p></div>
+<div class="investigation-grid"><div class="investigation-copy"><h2>A tunnel built.<br><em>An instrument still to prove.</em></h2><p>Four researcher conversations changed the next stage: characterize the empty tunnel, validate a NACA 0018 baseline, then choose an original question the apparatus can distinguish from noise.</p><a class="text-link light" href="${root}research/#future-plans">Read the future plan ${arrow}</a></div>
+<div class="ledger" aria-label="Measurement stand status"><div class="ledger-row"><span>Differential pressure</span><span class="ledger-status build">In build</span></div><div class="ledger-row"><span>Lift / drag load cells</span><span class="ledger-status calibrating">Calibrating</span></div><div class="ledger-row"><span>Airfoil mounting</span><span class="ledger-status planned">Planned</span></div><div class="ledger-row"><span>Data pipeline</span><span class="ledger-status planned">Sample input only</span></div><p class="ledger-note">Uncalibrated readings are not aerodynamic results.</p></div></div>
 </div></section>
 <section class="explorations"><div class="wrap">
 <div class="section-head"><div><p class="eyebrow">03 — Explorations</p><h2>Follow your curiosity.</h2></div><div class="section-aside"><p>Images that open a door to an idea.</p><a class="text-link" href="${root}explorations/">Enter explorations ${arrow}</a></div></div>
@@ -89,7 +90,7 @@ export function home(root: string): string {
 </div></section>
 <section class="notebook-band" id="notebook"><div class="wrap notebook-grid">
 <div class="notebook-intro"><p class="eyebrow">04 — Notebook</p><h2>The work<br><em>between the results.</em></h2><p class="notebook-copy">Build notes, design decisions, and questions worth returning to. An open notebook, including the parts still unresolved.</p><a class="text-link" href="${root}notebook/">Open the notebook ${arrow}</a><span class="scribble">Observe. Record. Reconsider.</span></div>
-<div class="note-list"><p class="note-list-head">Open record · Latest entry 13 Oct 2026</p>${notebook.slice(0, 3).map((n) => noteLine(n)).join("")}</div>
+<div class="note-list"><p class="note-list-head">Open record · Latest entry ${date(latestNote.date)}</p>${notebook.slice(0, 3).map((n) => noteLine(n)).join("")}</div>
 </div></section>
 <section class="evidence"><div class="wrap">
 <div class="evidence-grid"><div class="evidence-intro"><p class="eyebrow">05 — Evidence</p><h2>Look closer.</h2></div>

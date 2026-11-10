@@ -1,6 +1,40 @@
 import type { NotebookEntry } from "../src/content-types.ts";
 export const notebook: NotebookEntry[] = [
   {
+    id: "a-surprising-signal-is-not-yet-a-result",
+    number: "007",
+    title: "A surprising signal is not yet a result.",
+    date: "2026-11-05",
+    updated: "2026-11-06",
+    type: "Research note",
+    project: "wind-tunnel",
+    tags: ["Instrumentation", "Uncertainty", "Experimental design"],
+    summary:
+      "The Caltech conversations turned characterization into the first experiment: map the flow, test the sensors, and rule out vibration before calling a force trace aerodynamic.",
+    provenance:
+      "Edited synthesis of Caltech researcher conversations recorded 5 November 2026. Paraphrased guidance, not a transcript or completed experiment. Public attribution and titles remain unconfirmed.",
+    file: "a-surprising-signal-is-not-yet-a-result.md",
+    references: ["repository", "logger", "dynamic-pressure"],
+    related: ["a-tunnel-is-not-yet-an-instrument", "calibration-before-conclusions"],
+  },
+  {
+    id: "a-tunnel-is-not-yet-an-instrument",
+    number: "006",
+    title: "A tunnel is not yet an instrument.",
+    date: "2026-11-02",
+    updated: "2026-11-06",
+    type: "Research note",
+    project: "wind-tunnel",
+    tags: ["Research design", "Validation", "Low-Reynolds number"],
+    summary:
+      "Two conversations shifted the project from building a tunnel to earning the right to interpret it: validate NACA 0018 first, then look for a question the literature has not answered.",
+    provenance:
+      "Edited synthesis of interview notes recorded 2 November 2026 with Scott and a Texas A&M aerospace researcher. Paraphrased guidance; the Texas A&M researcher remains unnamed pending confirmation.",
+    file: "a-tunnel-is-not-yet-an-instrument.md",
+    references: ["repository", "naca", "dynamic-pressure"],
+    related: ["a-surprising-signal-is-not-yet-a-result", "stand-in-progress"],
+  },
+  {
     id: "stand-in-progress",
     number: "005",
     title: "A clearer flow. A new measurement stand.",

@@ -98,6 +98,7 @@ export interface ResearchPaper {
   methodology: string;
   findings: string;
   limitations: string;
+  sections?: Section[];
   references: string[];
   pdf?: string;
   code?: string;

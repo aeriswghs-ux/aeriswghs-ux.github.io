@@ -121,7 +121,7 @@ export async function build(): Promise<string[]> {
       summary: r.abstract,
       type: "Research",
       url: `research/${r.id}/`,
-      text: `${r.question} ${r.methodology} ${r.findings} ${r.limitations}`,
+      text: `${r.question} ${r.methodology} ${r.findings} ${r.limitations} ${(r.sections ?? []).map((section) => section.body).join(" ")}`,
     })),
     ...explorations.map((e) => ({
       title: e.title,
