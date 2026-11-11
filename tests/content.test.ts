@@ -111,3 +111,16 @@ test("nested pages link correctly from repository subpaths", () => {
   assert.match(html, /href="\.\.\/\.\.\/notebook\//);
   assert.doesNotMatch(html, /(?:src|href)="\/assets/);
 });
+test("apparatus bench tabs and panels stay wired", () => {
+  const html = readFileSync("index.html", "utf8");
+  const keys = ["cubesat", "wind", "rocket"];
+  assert.deepEqual(
+    [...html.matchAll(/data-lab-tab="([^"]+)"/g)].map((m) => m[1]),
+    keys,
+  );
+  for (const key of keys) {
+    assert.match(html, new RegExp(`aria-controls="lab-panel-${key}"`));
+    assert.match(html, new RegExp(`data-lab-panel="${key}"`));
+  }
+  assert.equal((html.match(/class="lab-plate-img"/g) || []).length, 3);
+});

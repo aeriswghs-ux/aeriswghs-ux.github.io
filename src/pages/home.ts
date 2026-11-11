@@ -1,5 +1,6 @@
 import { layout } from "../components/layout.ts";
 import { mediaImage } from "../components/content.ts";
+import { apparatusLab } from "../components/apparatus.ts";
 import { esc, icon, date } from "../render.ts";
 import { projects } from "../../content/projects.ts";
 import { notebook } from "../../content/notebook.ts";
@@ -79,21 +80,22 @@ export function home(root: string): string {
 </div>
 </div>
 </div></section>
+${apparatusLab(root)}
 <section class="investigation" id="acquisition"><div class="wrap">
 <div class="investigation-head"><p class="live-label"><i aria-hidden="true"></i>Currently investigating</p><p class="investigation-meta">Research plan / 06 Nov 2026</p></div>
 <div class="investigation-grid"><div class="investigation-copy"><h2>A tunnel built.<br><em>An instrument still to prove.</em></h2><p>Four researcher conversations changed the next stage: characterize the empty tunnel, validate a NACA 0018 baseline, then choose an original question the apparatus can distinguish from noise.</p><a class="text-link light" href="${root}research/#future-plans">Read the future plan ${arrow}</a></div>
 <div class="ledger" aria-label="Measurement stand status"><div class="ledger-row"><span>Differential pressure</span><span class="ledger-status build">In build</span></div><div class="ledger-row"><span>Lift / drag load cells</span><span class="ledger-status calibrating">Calibrating</span></div><div class="ledger-row"><span>Airfoil mounting</span><span class="ledger-status planned">Planned</span></div><div class="ledger-row"><span>Data pipeline</span><span class="ledger-status planned">Sample input only</span></div><p class="ledger-note">Uncalibrated readings are not aerodynamic results.</p></div></div>
 </div></section>
 <section class="explorations"><div class="wrap">
-<div class="section-head"><div><p class="eyebrow">03 — Explorations</p><h2>Follow your curiosity.</h2></div><div class="section-aside"><p>Images that open a door to an idea.</p><a class="text-link" href="${root}explorations/">Enter explorations ${arrow}</a></div></div>
+<div class="section-head"><div><p class="eyebrow">04 — Explorations</p><h2>Follow your curiosity.</h2></div><div class="section-aside"><p>Images that open a door to an idea.</p><a class="text-link" href="${root}explorations/">Enter explorations ${arrow}</a></div></div>
 <div class="exploration-grid">${explorationTile(solar, "")}${explorationTile(naca, "offset-mid")}${explorationTile(honeycomb, "offset-low")}</div>
 </div></section>
 <section class="notebook-band" id="notebook"><div class="wrap notebook-grid">
-<div class="notebook-intro"><p class="eyebrow">04 — Notebook</p><h2>The work<br><em>between the results.</em></h2><p class="notebook-copy">Build notes, design decisions, and questions worth returning to. An open notebook, including the parts still unresolved.</p><a class="text-link" href="${root}notebook/">Open the notebook ${arrow}</a><span class="scribble">Observe. Record. Reconsider.</span></div>
+<div class="notebook-intro"><p class="eyebrow">05 — Notebook</p><h2>The work<br><em>between the results.</em></h2><p class="notebook-copy">Build notes, design decisions, and questions worth returning to. An open notebook, including the parts still unresolved.</p><a class="text-link" href="${root}notebook/">Open the notebook ${arrow}</a><span class="scribble">Observe. Record. Reconsider.</span></div>
 <div class="note-list"><p class="note-list-head">Open record · Latest entry ${date(latestNote.date)}</p>${notebook.slice(0, 3).map((n) => noteLine(n)).join("")}</div>
 </div></section>
 <section class="evidence"><div class="wrap">
-<div class="evidence-grid"><div class="evidence-intro"><p class="eyebrow">05 — Evidence</p><h2>Look closer.</h2></div>
+<div class="evidence-grid"><div class="evidence-intro"><p class="eyebrow">06 — Evidence</p><h2>Look closer.</h2></div>
 <a class="evidence-col" href="${root}research/"><span class="evidence-index">01</span><h3>Research archive</h3><p>Questions, methods, and limitations</p><span class="evidence-link">Open archive ${arrow}</span></a>
 <a class="evidence-col" href="${root}projects/${computing.id}/#data"><span class="evidence-index">02</span><h3>Sample data</h3><p>Interactive plots with the original values</p><span class="evidence-link">Explore the data ${arrow}</span></a>
 <a class="evidence-col" href="${repo}"><span class="evidence-index">03</span><h3>Source code</h3><p>Code, print files, and documentation</p><span class="evidence-link">Inspect on GitHub ${external}</span></a></div>
@@ -105,5 +107,6 @@ export function home(root: string): string {
     body,
     root,
     home: true,
+    lab: true,
   });
 }

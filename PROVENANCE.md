@@ -21,12 +21,17 @@ NASA images are used for educational and informational context under the [NASA I
 | `assets/media/earthrise-*` | [Earthrise, Apollo 8, 24 December 1968](https://www.nasa.gov/image-article/apollo-8-astronaut-bill-anders-captures-earthrise/) · NASA / Bill Anders | `https://www.nasa.gov/wp-content/uploads/2023/03/apollo_8_earthrise_1968_as08-14-2383.jpg` |
 | `assets/media/solar-arrays-*` | [ISS solar arrays, 1 January 2015](https://www.nasa.gov/image-article/station-solar-arrays-from-russian-zarya-module/) · NASA | `https://www.nasa.gov/wp-content/uploads/2023/03/iss042e094136_0.jpg` |
 | `assets/media/wind-tunnel-*` | [Richard Whitcomb with a wind-tunnel model, 1959](https://www.nasa.gov/history/the-national-advisory-committee-for-aeronautics-naca/) · NASA | `https://www.nasa.gov/wp-content/uploads/2023/03/lrc-rwhitcomb-1959-arearule-fuselage_0.jpg` |
+| `assets/media/sounding-rocket-*` | [DYNAMO-2 launch, Black Brant IX, Wallops Flight Facility](https://www.nasa.gov/image-detail/dynamo-2-36-357-50k-launch-photos/) · NASA | `https://www.nasa.gov/wp-content/uploads/2023/02/WFF-2021-045-002.jpg` |
 
 Each image has 640-, 1000-, and 1041-pixel variants, with no upscaling. Full provenance, alt text, dimensions, kind, and caption are stored in `content/media.ts` and surfaced on exploration details. `assets/acquisition-diagram.svg` is an original geometric diagram derived from the earlier logger source, explicitly not a verified wiring schematic or representation of the newer stand.
 
 The existing environmental sample values are reproduced exactly. The downloadable local CSV is a normalized export with explicit unit headers, not a byte-for-byte copy of the original CSV. Its original repository source is linked. No measured aerodynamic results have been generated. The general dynamic-pressure relation in the calibration note is educational context supported by [NASA Glenn](https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/dynamic-pressure/), not a calculation from this tunnel.
 
 No AI-generated imagery is shipped by this expansion. No assets from Cosmos, Awwwards, Behance, Dribbble, Pinterest, Lapa, or Muzli are reused. Existing font licenses remain preserved. The new interface uses the already-local Newsreader, IBM Plex Sans, and IBM Plex Mono WOFF2 files. KaTeX is used only at build time and its MIT notice is retained in `assets/KATEX-LICENSE.txt`.
+
+### Interactive apparatus bench, 10 November 2026
+
+The homepage bench adds three original SVG mechanism diagrams (CubeSat deployment, low-speed tunnel, sounding-rocket ascent) built with anime.js 4.5.0. Every scene and telemetry value is explicitly labelled as a concept: the diagrams are not CAD, CFD, flight data, or measured hardware. No generated imagery is used. Anime.js is vendored at `assets/vendor/anime.esm.min.js` with its MIT notice at `assets/vendor/ANIME-LICENSE.md`.
 
 Repository deep-link paths were rechecked against the current GitHub tree on October 13. This confirms path availability, not that the newer hardware configuration has been committed or validated.
 
