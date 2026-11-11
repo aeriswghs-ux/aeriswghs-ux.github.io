@@ -1,14 +1,176 @@
 <!doctype html><html lang="en" data-default-theme="light"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ed">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f0efe9">
 <title>Notebook · AeroAspirant</title><meta name="description" content="A chronological engineering notebook with source reviews, build updates, design decisions, and open questions.">
 <meta property="og:title" content="Notebook · The Engineering Fieldbook"><meta property="og:description" content="A chronological engineering notebook with source reviews, build updates, design decisions, and open questions."><meta property="og:type" content="website">
-<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../fonts.css"><link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../fonts.css"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../theme.css">
 <script src="../theme.js"></script><script src="../script.js" defer></script><link rel="canonical" href="https://aeriswghs-ux.github.io/notebook/"><meta property="og:url" content="https://aeriswghs-ux.github.io/notebook/"><meta property="og:image" content="https://aeriswghs-ux.github.io/assets/media/earthrise-1041.webp"><meta property="og:image:alt" content="NASA / Bill Anders — Earthrise, Apollo 8"><meta name="twitter:card" content="summary_large_image"></head>
 <body id="top" data-root="../"><a class="skip-link" href="#main">Skip to content</a>
 <header class="masthead"><div class="wrap masthead-inner"><a class="brand" href="../index.html" aria-label="AeroAspirant home"><svg class="brand-mark" viewBox="0 0 36 36" width="34" height="34" aria-hidden="true"><path d="m8 29 10-23 10 23M12 21h12" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="18" cy="20" rx="17" ry="6" transform="rotate(-35 18 20)" fill="none" stroke="currentColor" stroke-width="1"/></svg><span>AeroAspirant<span class="brand-sub">The Engineering Fieldbook</span></span></a>
 <nav id="primary-nav" aria-label="Primary navigation"><a href="../index.html">Home</a><a href="../projects/">Projects</a><a href="../research/">Research</a><a href="../notebook/" aria-current="page">Notebook</a><a href="../explorations/">Explorations</a><a href="../about/">About</a></nav>
 <div class="nav-tools"><a class="icon-button" href="../search/" aria-label="Search the fieldbook"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 21l-5-5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0"/></svg></a><button class="icon-button" data-theme-toggle aria-label="Switch color mode" aria-pressed="false" hidden><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3V1m0 22v-2M3 12H1m22 0h-2M4.2 4.2 2.8 2.8m18.4 18.4-1.4-1.4M4.2 19.8l-1.4 1.4M21.2 2.8l-1.4 1.4M17 12a5 5 0 1 1-10 0 5 5 0 0 1 10 0"/></svg></button><button class="icon-button menu-button" data-menu-toggle aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation" hidden><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div></div></header>
-<main id="main" tabindex="-1"><div class="page-head wrap"><div class="page-title-row"><h1>The open notebook.</h1><span class="page-meta">5 entries · Updated 13 Oct 2026</span></div><p class="page-dek">A place for the process: what changed, what is known, what went wrong, and what to try next.</p></div><section class="wrap collection notebook-collection" data-collection><div class="filter-bar" data-filters hidden><label class="search-field"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 21l-5-5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0"/></svg><span class="sr-only">Search notebook</span><input type="search" data-filter-search placeholder="Search notebook…" autocomplete="off"></label><div class="filter-controls"><label><span class="sr-only">Filter by entry type</span><select data-filter-category><option value="">All entry types</option><option>Research note</option><option>Experiment</option><option>Design decision</option><option>Simulation</option><option>Build log</option><option>Literature review</option><option>Reflection</option></select></label><label><span class="sr-only">Filter by project</span><select data-filter-status><option value="">All projects</option><option value="wind-tunnel">Aerodynamics</option><option value="cubesat">Spacecraft systems</option><option value="scientific-computing">Scientific computing</option></select></label><label><span class="sr-only">Filter by topic</span><select data-filter-tag><option value="">All topics</option><option>Data analysis</option><option>Fabrication</option><option>Flow visualization</option><option>Geometry</option><option>Instrumentation</option><option>Iteration</option><option>Python</option><option>Uncertainty</option></select></label><button class="quiet-button" data-filter-reset>Reset</button></div></div><p class="filter-count small-note" data-filter-count role="status" hidden></p><div class="notebook-layout"><aside class="notebook-aside"><h2>Notes from the bench.</h2><p>This first collection brings the existing source record and owner’s build updates into one readable place.</p><p>Each entry identifies its origin. Transcriptions and planning notes are clearly labeled.</p><a href="../AUTHORING.md">How this notebook is maintained <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></aside><div><div class="entry-list"><article class="note-row" data-filter-item data-category="Build log" data-status="wind-tunnel" data-tags="Instrumentation|Fabrication|Flow visualization" data-search="a clearer flow. a new measurement stand. dry ice in water makes the inlet flow visible. the next challenge is a stand that can hold airfoils and model aircraft. instrumentation fabrication flow visualization build log ## research objective
+<main id="main" tabindex="-1"><div class="page-head wrap"><div class="page-title-row"><h1>The open notebook.</h1><span class="page-meta">7 entries · 06 Nov 2026</span></div><p class="page-dek">Interview syntheses, build notes, source reviews, and the questions that changed the plan.</p></div><section class="wrap collection notebook-collection" data-collection><div class="filter-bar" data-filters hidden><label class="search-field"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 21l-5-5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0"/></svg><span class="sr-only">Search notebook</span><input type="search" data-filter-search placeholder="Search notebook…" autocomplete="off"></label><div class="filter-controls"><label><span class="sr-only">Filter by entry type</span><select data-filter-category><option value="">All entry types</option><option>Research note</option><option>Experiment</option><option>Design decision</option><option>Simulation</option><option>Build log</option><option>Literature review</option><option>Reflection</option></select></label><label><span class="sr-only">Filter by project</span><select data-filter-status><option value="">All projects</option><option value="wind-tunnel">Aerodynamics</option><option value="cubesat">Spacecraft systems</option><option value="scientific-computing">Scientific computing</option></select></label><label><span class="sr-only">Filter by topic</span><select data-filter-tag><option value="">All topics</option><option>Data analysis</option><option>Experimental design</option><option>Fabrication</option><option>Flow visualization</option><option>Geometry</option><option>Instrumentation</option><option>Iteration</option><option>Low-Reynolds number</option><option>Python</option><option>Research design</option><option>Uncertainty</option><option>Validation</option></select></label><button class="quiet-button" data-filter-reset>Reset</button></div></div><p class="filter-count small-note" data-filter-count role="status" hidden></p><div class="notebook-layout"><aside class="notebook-aside"><h2>Notes from the bench.</h2><p>The newest entries synthesize four researcher conversations from 2 and 5 November. They are marked as paraphrased guidance, not measured results.</p><p>Older entries preserve the build record and its unresolved calibration work. Together they show why the next experiment is characterization, not another demonstration.</p><a href="../research/#future-plans">See what the interviews changed <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a></aside><div><div class="entry-list"><article class="note-row" data-filter-item data-category="Research note" data-status="wind-tunnel" data-tags="Instrumentation|Uncertainty|Experimental design" data-search="a surprising signal is not yet a result. the caltech conversations turned characterization into the first experiment: map the flow, test the sensors, and rule out vibration before calling a force trace aerodynamic. instrumentation uncertainty experimental design research note ## research objective
+
+learn to distinguish an aerodynamic phenomenon from an instrument artifact before attempting a dynamic experiment.
+
+the 5 november conversation with a caltech researcher made this the organizing rule for the next stage. a novel-looking signal is not evidence until the measurement system, the structure, and the software have each been tested as possible sources. the point is not to become suspicious of every result. it is to make the alternatives inspectable.
+
+## three possible sources of one trace
+
+| source | what it can look like | evidence needed |
+| --- | --- | --- |
+| aerodynamic | separation, shear-layer motion, finite-span loading, unsteady force | repeatable dependence on flow speed, angle, and geometry, with a plausible mechanism |
+| mechanical | mount resonance, bracket vibration, fan excitation, sensor cross-axis load | zero-flow and motor-only tests, stiffness checks, impact or frequency-response tests |
+| software | stuck-at-zero sensor, dropped sample, wrong unit, silent failure handling | reference checks, range tests, timestamp checks, explicit invalid-value states |
+
+the researcher described a reinforcement-learning experiment that appeared to converge because faulty sensors returned zero readings, which the software interpreted as zero error. they also described how an apparent force oscillation in a hypothetical airfoil/shear-layer experiment could come from a resonance of the mounts, brackets, or supports rather than from the flow. neither example proves that this tunnel has the same fault. together they show why the fault must be ruled out before the phenomenon is named.
+
+## what to measure before measuring forces
+
+the immediate recommendation was to map the velocity field first:
+
+- measure at the centerline and near the corners and edges of the test section.
+- move a single sensor through a grid if a sensor array is unavailable.
+- repeat the map at several stable fan or pwm settings.
+- record ambient temperature and pressure with the velocity observations.
+- document sampling duration, grid spacing, stabilization time, and repeat count instead of leaving them arbitrary.
+- measure the relation between pwm command and actual test-section velocity, then fit it with residuals. any approximately linear behavior must be verified on this assembled tunnel, not assumed from a fan datasheet.
+- repeat conditions across runs, not only within one run.
+
+this turns the empty tunnel into the first experiment. it also produces the reference needed to assign a reynolds number. a fan&#39;s rated flow rate or duty cycle does not establish the velocity in the test section.
+
+the researcher introduced shear layers as gradients in flow speed transverse to the main direction, with mixing and vortical motion as possible consequences. that is a phenomenon worth understanding. it is not evidence that the present tunnel has generated one.
+
+## the dynamic experiment gate
+
+a moving-angle-of-attack test adds four requirements at once:
+
+1. a controlled, repeatable motion with a measured angle history.
+2. force, angle, speed, and environmental data on a common timeline.
+3. enough sensor bandwidth to resolve the expected force change.
+4. a mount stiff enough that its resonances are outside, or clearly separable from, the frequency range of interest.
+
+before committing to a dynamic-pitch investigation, the apparatus needs zero-airflow force baselines, motor-only vibration records, a mount-stiffness assessment, sensor cross-axis checks, and a timing test. if those checks cannot separate a structural oscillation from an aerodynamic one, the experiment is not ready. a static finite-span or measurement-method comparison may be the stronger next study.
+
+## sensor failure is a data problem too
+
+one practical lesson is easy to postpone: a disconnected or failed sensor must not become a plausible zero. the data pipeline should mark out-of-range values, detect a channel that never changes, preserve raw readings, and make dropped samples visible. a calibration record should include the reference, the date, the expected range, the observed offset or drift, and the units.
+
+this is also a software requirement. a smooth plot is not proof that the values behind it are meaningful.
+
+## mentorship, with limits
+
+the follow-up conversation confirmed that the caltech researcher would serve as a pcis mentor at roughly one hour of contact per month, subject to a busy schedule and possible rescheduling. they offered conceptual feedback and some possible access to surplus equipment. they did not promise sustained hands-on experimental supervision, regular code review, laboratory placement, authorship, or a recommendation.
+
+the mentor supported aiming high while making clear that a peer-reviewed publication is uncertain given time and resources. their advice was to choose a question worth sustaining because the learning matters even if the most ambitious publication goal is not reached. they discussed several directions, including wind prediction, aerodynamics, and propulsion, but did not select the final topic.
+
+public-facing names, titles, and approval to attribute the conversations are still to be confirmed. the mentoring arrangement should be documented separately from technical supervision, authorship, or institutional sponsorship.
+
+## what changed
+
+the earlier plan treated the stand as the next build milestone and the airfoil test as the next experiment. the revised order is stricter:
+
+1. finish and document the instrument.
+2. characterize the empty tunnel.
+3. validate a naca 0018 baseline.
+4. only then choose a novel question.
+
+the 2 november conversations supplied the research logic. the 5 november conversation supplied the measurement scepticism. both are now part of the same gate.
+
+## next steps
+
+- write the empty-tunnel velocity-grid protocol with explicit grid, sampling, stabilization, and repeat rules.
+- test sensor-failure handling before collecting a dataset.
+- build the zero-flow and motor-only force records.
+- measure the actual pwm-to-speed relation, with residuals.
+- bring the characterization results and three technical questions to the next mentor meeting.
+- keep the dynamic experiment conditional until its mechanical and temporal response is measured.
+
+## revision record
+
+**5 november 2026:** created from the caltech researcher conversations. no force or velocity dataset was supplied.
+
+**6 november 2026:** edited for publication with the revised research plan and the 2 november validation note.
+"><div class="note-date"><span class="mono">N° 007</span><time datetime="2026-11-05">05 Nov 2026</time></div><div class="note-main"><div class="card-meta"><span>Research note</span><span>Aerodynamics</span></div><h2><a href="../notebook/a-surprising-signal-is-not-yet-a-result/">A surprising signal is not yet a result.</a></h2><p>The Caltech conversations turned characterization into the first experiment: map the flow, test the sensors, and rule out vibration before calling a force trace aerodynamic.</p><div class="tags"><span>Instrumentation</span><span>Uncertainty</span><span>Experimental design</span></div></div><a class="row-arrow" href="../notebook/a-surprising-signal-is-not-yet-a-result/" aria-label="Read A surprising signal is not yet a result."><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a></article><article class="note-row" data-filter-item data-category="Research note" data-status="wind-tunnel" data-tags="Research design|Validation|Low-Reynolds number" data-search="a tunnel is not yet an instrument. two conversations shifted the project from building a tunnel to earning the right to interpret it: validate naca 0018 first, then look for a question the literature has not answered. research design validation low-reynolds number research note ## research objective
+
+decide what the wind tunnel is for before asking it for a result. the tunnel is already a useful build. the harder question is whether it can become an instrument that produces evidence another person could inspect and repeat.
+
+the 2 november review brought together two conversations: one with scott, whose research has moved through experimental combustion, computational fluid dynamics, mathematical modeling, dynamics and control, and multi-agent systems; and one with an aerospace researcher at texas a&amp;m. they approached the problem from different directions and arrived at the same boundary between engineering and research.
+
+## what changed
+
+a working tunnel is not automatically a validated scientific instrument. rebuilding a familiar naca result can be excellent training, but the result is not automatically a contribution.
+
+scott&#39;s test was direct: read the literature, identify an unresolved question, and design the measurement around it. the texas a&amp;m researcher made the same distinction experimentally: first show that the apparatus can reproduce published lift and drag behavior at a comparable reynolds number. only then use the apparatus to probe something less characterized.
+
+that reorders the project:
+
+1. establish what the tunnel actually produces.
+2. reproduce a known baseline.
+3. choose a question that survives a focused literature review.
+4. attempt the original experiment.
+
+the interviews did not supply a research question that is already known to be novel. they supplied a procedure for deciding whether one is worth pursuing.
+
+## what the conversations agreed on
+
+| guidance | consequence for this project |
+| --- | --- |
+| a familiar result is not automatically new. | the naca 0018 comparison is validation, not the final paper. |
+| a research contribution needs a literature-defined gap. | no novelty claim until comparable sources have been read and recorded. |
+| low-reynolds-number measurements are sensitive and hard to reproduce. | agreement with a suitable reference would itself be a meaningful result. |
+| lift and drag need distinct, properly arranged force measurements. | a single ambiguous force channel is not enough for coefficient curves. |
+| advanced optics are not the first step. | piv is not feasible here; the first task is credible velocity and force measurement. |
+| the mechanism matters more than the software stack. | each measurement should connect to an aerodynamic quantity, an assumption, and an uncertainty. |
+
+the texas a&amp;m researcher also described particle image velocimetry as an advanced method well beyond the present budget. that was not a reason to avoid measurement. it was a reminder that even an expensive technique depends on experiment design, calibration, data handling, and an answerable question.
+
+## the validation target
+
+the working airfoil choice is naca 0018. the proposed sequence is to hold angle of attack fixed, record the actual flow speed and ambient conditions, and compute lift and drag coefficients using documented reference dimensions. the results would then be compared with published data at the closest achievable reynolds number and test geometry.
+
+the comparison is not a formality. the eventual report would need to explain differences caused by flow non-uniformity, finite-span and end effects, blockage, mounting interference, force-system cross-talk, alignment, surface condition, or measurement noise. a disagreement could be more informative than a tidy curve if the cause is investigated honestly.
+
+several inputs are still missing. the test-section size has been described verbally as “8 by 8,” but the units and actual dimensions are unconfirmed. an approximate reynolds-number range of 50,000 to 100,000 has been discussed, but it is based on fan specifications and informal estimates. it is not a measured operating range. the fan setting does not establish the velocity in the assembled test section; the velocity has to be measured.
+
+## the literature problem
+
+scott cautioned that conventional two-dimensional naca behavior has been studied extensively. he suggested looking beyond a repetition of that result toward finite-wing and three-dimensional effects, moving or morphing geometry, transient forces, or applications such as quieter propellers and rotors. those were brainstorming directions, not verified gaps.
+
+the texas a&amp;m conversation added rapid changes in angle of attack as a candidate: the force during motion can differ from the force at the same angle held steady, and the rate of motion may itself be a variable. reverse-flow airfoil behavior, motivated by advancing and retreating rotor-blade conditions, was offered as another possible direction. again, neither suggestion came with a literature review.
+
+that leaves a clear task before any novel experiment: find out what has already been measured, under which conditions, and with what uncertainty. a direction becomes a research question only after that work.
+
+## the provisional question
+
+the plan now points toward a question that combines the interviews but remains unproven:
+
+&gt; at a measured low reynolds number, how does the rate of change of angle of attack alter the time-dependent lift response of a finite naca 0018 wing relative to fixed-angle baselines?
+
+this is a candidate, not a final hypothesis. it is only credible if the apparatus can resolve the expected signal. force-sensor bandwidth, dynamic mount stiffness, actuation, sampling, calibration, and synchronization all have to be tested first. if they cannot separate an aerodynamic response from mechanical vibration, a static finite-span or measurement-method study may be the more honest investigation.
+
+## what this note establishes
+
+the project now has two tracks that must not be confused:
+
+- **validation:** can the apparatus reproduce a known naca 0018 result under documented conditions?
+- **contribution:** after the literature review, is there a specific unanswered question this apparatus can address?
+
+the first track is executable now. the second remains a decision, not a promise. a peer-reviewed publication is an aspiration, not a guaranteed deliverable.
+
+## next steps
+
+- measure the tunnel and test-section geometry, and record the units.
+- find published naca 0018 data at the closest achievable reynolds number, aspect ratio, surface condition, and test method. read each source before citing it.
+- document lift and drag as separate force channels with a calibration and alignment plan.
+- write the fixed-angle baseline protocol before running the first coefficient sweep.
+- review the dynamic-pitch literature and the apparatus requirements separately. do not let one substitute for the other.
+
+## revision record
+
+**2 november 2026:** created from the first research-planning conversations. no measurements, coefficients, or novelty claims were added.
+
+**6 november 2026:** edited for publication alongside the revised research plan and the 5 november instrumentation note.
+"><div class="note-date"><span class="mono">N° 006</span><time datetime="2026-11-02">02 Nov 2026</time></div><div class="note-main"><div class="card-meta"><span>Research note</span><span>Aerodynamics</span></div><h2><a href="../notebook/a-tunnel-is-not-yet-an-instrument/">A tunnel is not yet an instrument.</a></h2><p>Two conversations shifted the project from building a tunnel to earning the right to interpret it: validate NACA 0018 first, then look for a question the literature has not answered.</p><div class="tags"><span>Research design</span><span>Validation</span><span>Low-Reynolds number</span></div></div><a class="row-arrow" href="../notebook/a-tunnel-is-not-yet-an-instrument/" aria-label="Read A tunnel is not yet an instrument."><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a></article><article class="note-row" data-filter-item data-category="Build log" data-status="wind-tunnel" data-tags="Instrumentation|Fabrication|Flow visualization" data-search="a clearer flow. a new measurement stand. dry ice in water makes the inlet flow visible. the next challenge is a stand that can hold airfoils and model aircraft. instrumentation fabrication flow visualization build log ## research objective
 
 develop the wind-tunnel measurement stand so it can accommodate airfoils and model aircraft while supporting lift, drag, pressure, and environmental measurements.
 

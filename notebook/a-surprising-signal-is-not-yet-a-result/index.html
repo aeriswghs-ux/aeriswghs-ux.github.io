@@ -1,0 +1,210 @@
+<!doctype html><html lang="en" data-default-theme="light"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f0efe9">
+<title>A surprising signal is not yet a result. · AeroAspirant</title><meta name="description" content="The Caltech conversations turned characterization into the first experiment: map the flow, test the sensors, and rule out vibration before calling a force trace aerodynamic.">
+<meta property="og:title" content="A surprising signal is not yet a result. · The Engineering Fieldbook"><meta property="og:description" content="The Caltech conversations turned characterization into the first experiment: map the flow, test the sensors, and rule out vibration before calling a force trace aerodynamic."><meta property="og:type" content="website">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../fonts.css"><link rel="stylesheet" href="../../styles.css"><link rel="stylesheet" href="../../theme.css">
+<script src="../../theme.js"></script><script src="../../script.js" defer></script><link rel="canonical" href="https://aeriswghs-ux.github.io/notebook/a-surprising-signal-is-not-yet-a-result/"><meta property="og:url" content="https://aeriswghs-ux.github.io/notebook/a-surprising-signal-is-not-yet-a-result/"><meta property="og:image" content="https://aeriswghs-ux.github.io/assets/media/earthrise-1041.webp"><meta property="og:image:alt" content="NASA / Bill Anders — Earthrise, Apollo 8"><meta name="twitter:card" content="summary_large_image"></head>
+<body id="top" data-root="../../"><a class="skip-link" href="#main">Skip to content</a>
+<header class="masthead"><div class="wrap masthead-inner"><a class="brand" href="../../index.html" aria-label="AeroAspirant home"><svg class="brand-mark" viewBox="0 0 36 36" width="34" height="34" aria-hidden="true"><path d="m8 29 10-23 10 23M12 21h12" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="18" cy="20" rx="17" ry="6" transform="rotate(-35 18 20)" fill="none" stroke="currentColor" stroke-width="1"/></svg><span>AeroAspirant<span class="brand-sub">The Engineering Fieldbook</span></span></a>
+<nav id="primary-nav" aria-label="Primary navigation"><a href="../../index.html">Home</a><a href="../../projects/">Projects</a><a href="../../research/">Research</a><a href="../../notebook/" aria-current="page">Notebook</a><a href="../../explorations/">Explorations</a><a href="../../about/">About</a></nav>
+<div class="nav-tools"><a class="icon-button" href="../../search/" aria-label="Search the fieldbook"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 21l-5-5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0"/></svg></a><button class="icon-button" data-theme-toggle aria-label="Switch color mode" aria-pressed="false" hidden><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3V1m0 22v-2M3 12H1m22 0h-2M4.2 4.2 2.8 2.8m18.4 18.4-1.4-1.4M4.2 19.8l-1.4 1.4M21.2 2.8l-1.4 1.4M17 12a5 5 0 1 1-10 0 5 5 0 0 1 10 0"/></svg></button><button class="icon-button menu-button" data-menu-toggle aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation" hidden><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div></div></header>
+<main id="main" tabindex="-1"><nav class="breadcrumb wrap" aria-label="Breadcrumb"><a href="../../index.html">Home</a><span aria-hidden="true">/</span><a href="../../notebook/">Notebook</a><span aria-hidden="true">/</span><span>Entry 007</span></nav><header class="detail-head notebook-head wrap"><div class="detail-meta"><span class="mono">ENTRY 007</span><span>Research note</span><time datetime="2026-11-05">05 Nov 2026</time></div><h1>A surprising signal is not yet a result.</h1><p class="page-dek">The Caltech conversations turned characterization into the first experiment: map the flow, test the sensors, and rule out vibration before calling a force trace aerodynamic.</p><div class="tags"><a href="../../notebook/?tag=Instrumentation">Instrumentation</a><a href="../../notebook/?tag=Uncertainty">Uncertainty</a><a href="../../notebook/?tag=Experimental%20design">Experimental design</a></div></header><div class="wrap reading-layout"><aside class="contents"><details open><summary>In this record</summary><nav aria-label="On this page"><a href="#research-objective">Research objective</a><a href="#three-possible-sources-of-one-trace">Three possible sources of one trace</a><a href="#what-to-measure-before-measuring-forces">What to measure before measuring forces</a><a href="#the-dynamic-experiment-gate">The dynamic experiment gate</a><a href="#sensor-failure-is-a-data-problem-too">Sensor failure is a data problem too</a><a href="#mentorship-with-limits">Mentorship, with limits</a><a href="#what-changed">What changed</a><a href="#next-steps">Next steps</a><a href="#revision-record">Revision record</a><a href="#references">Sources</a></nav></details></aside><article class="prose notebook-page"><div class="entry-provenance"><p>Edited synthesis of Caltech researcher conversations recorded 5 November 2026. Paraphrased guidance, not a transcript or completed experiment. Public attribution and titles remain unconfirmed.</p><dl><dt>Associated project</dt><dd><a href="../../projects/wind-tunnel/">Learning to measure the air.</a></dd><dt>Last revised</dt><dd><time datetime="2026-11-06">06 Nov 2026</time></dd></dl></div><h2 id="research-objective">Research objective</h2>
+<p>Learn to distinguish an aerodynamic phenomenon from an instrument artifact before attempting a dynamic experiment.</p>
+<p>The 5 November conversation with a Caltech researcher made this the organizing rule for the next stage. A novel-looking signal is not evidence until the measurement system, the structure, and the software have each been tested as possible sources. The point is not to become suspicious of every result. It is to make the alternatives inspectable.</p>
+<h2 id="three-possible-sources-of-one-trace">Three possible sources of one trace</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Data table"><table><thead>
+<tr>
+<th>Source</th>
+<th>What it can look like</th>
+<th>Evidence needed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aerodynamic</td>
+<td>Separation, shear-layer motion, finite-span loading, unsteady force</td>
+<td>Repeatable dependence on flow speed, angle, and geometry, with a plausible mechanism</td>
+</tr>
+<tr>
+<td>Mechanical</td>
+<td>Mount resonance, bracket vibration, fan excitation, sensor cross-axis load</td>
+<td>Zero-flow and motor-only tests, stiffness checks, impact or frequency-response tests</td>
+</tr>
+<tr>
+<td>Software</td>
+<td>Stuck-at-zero sensor, dropped sample, wrong unit, silent failure handling</td>
+<td>Reference checks, range tests, timestamp checks, explicit invalid-value states</td>
+</tr>
+</tbody>
+</table></div><p>The researcher described a reinforcement-learning experiment that appeared to converge because faulty sensors returned zero readings, which the software interpreted as zero error. They also described how an apparent force oscillation in a hypothetical airfoil/shear-layer experiment could come from a resonance of the mounts, brackets, or supports rather than from the flow. Neither example proves that this tunnel has the same fault. Together they show why the fault must be ruled out before the phenomenon is named.</p>
+<h2 id="what-to-measure-before-measuring-forces">What to measure before measuring forces</h2>
+<p>The immediate recommendation was to map the velocity field first:</p>
+<ul>
+<li>Measure at the centerline and near the corners and edges of the test section.</li>
+<li>Move a single sensor through a grid if a sensor array is unavailable.</li>
+<li>Repeat the map at several stable fan or PWM settings.</li>
+<li>Record ambient temperature and pressure with the velocity observations.</li>
+<li>Document sampling duration, grid spacing, stabilization time, and repeat count instead of leaving them arbitrary.</li>
+<li>Measure the relation between PWM command and actual test-section velocity, then fit it with residuals. Any approximately linear behavior must be verified on this assembled tunnel, not assumed from a fan datasheet.</li>
+<li>Repeat conditions across runs, not only within one run.</li>
+</ul>
+<p>This turns the empty tunnel into the first experiment. It also produces the reference needed to assign a Reynolds number. A fan’s rated flow rate or duty cycle does not establish the velocity in the test section.</p>
+<p>The researcher introduced shear layers as gradients in flow speed transverse to the main direction, with mixing and vortical motion as possible consequences. That is a phenomenon worth understanding. It is not evidence that the present tunnel has generated one.</p>
+<h2 id="the-dynamic-experiment-gate">The dynamic experiment gate</h2>
+<p>A moving-angle-of-attack test adds four requirements at once:</p>
+<ol>
+<li>A controlled, repeatable motion with a measured angle history.</li>
+<li>Force, angle, speed, and environmental data on a common timeline.</li>
+<li>Enough sensor bandwidth to resolve the expected force change.</li>
+<li>A mount stiff enough that its resonances are outside, or clearly separable from, the frequency range of interest.</li>
+</ol>
+<p>Before committing to a dynamic-pitch investigation, the apparatus needs zero-airflow force baselines, motor-only vibration records, a mount-stiffness assessment, sensor cross-axis checks, and a timing test. If those checks cannot separate a structural oscillation from an aerodynamic one, the experiment is not ready. A static finite-span or measurement-method comparison may be the stronger next study.</p>
+<h2 id="sensor-failure-is-a-data-problem-too">Sensor failure is a data problem too</h2>
+<p>One practical lesson is easy to postpone: a disconnected or failed sensor must not become a plausible zero. The data pipeline should mark out-of-range values, detect a channel that never changes, preserve raw readings, and make dropped samples visible. A calibration record should include the reference, the date, the expected range, the observed offset or drift, and the units.</p>
+<p>This is also a software requirement. A smooth plot is not proof that the values behind it are meaningful.</p>
+<h2 id="mentorship-with-limits">Mentorship, with limits</h2>
+<p>The follow-up conversation confirmed that the Caltech researcher would serve as a PCIS mentor at roughly one hour of contact per month, subject to a busy schedule and possible rescheduling. They offered conceptual feedback and some possible access to surplus equipment. They did not promise sustained hands-on experimental supervision, regular code review, laboratory placement, authorship, or a recommendation.</p>
+<p>The mentor supported aiming high while making clear that a peer-reviewed publication is uncertain given time and resources. Their advice was to choose a question worth sustaining because the learning matters even if the most ambitious publication goal is not reached. They discussed several directions, including wind prediction, aerodynamics, and propulsion, but did not select the final topic.</p>
+<p>Public-facing names, titles, and approval to attribute the conversations are still to be confirmed. The mentoring arrangement should be documented separately from technical supervision, authorship, or institutional sponsorship.</p>
+<h2 id="what-changed">What changed</h2>
+<p>The earlier plan treated the stand as the next build milestone and the airfoil test as the next experiment. The revised order is stricter:</p>
+<ol>
+<li>Finish and document the instrument.</li>
+<li>Characterize the empty tunnel.</li>
+<li>Validate a NACA 0018 baseline.</li>
+<li>Only then choose a novel question.</li>
+</ol>
+<p>The 2 November conversations supplied the research logic. The 5 November conversation supplied the measurement scepticism. Both are now part of the same gate.</p>
+<h2 id="next-steps">Next steps</h2>
+<ul>
+<li>Write the empty-tunnel velocity-grid protocol with explicit grid, sampling, stabilization, and repeat rules.</li>
+<li>Test sensor-failure handling before collecting a dataset.</li>
+<li>Build the zero-flow and motor-only force records.</li>
+<li>Measure the actual PWM-to-speed relation, with residuals.</li>
+<li>Bring the characterization results and three technical questions to the next mentor meeting.</li>
+<li>Keep the dynamic experiment conditional until its mechanical and temporal response is measured.</li>
+</ul>
+<h2 id="revision-record">Revision record</h2>
+<p><strong>5 November 2026:</strong> Created from the Caltech researcher conversations. No force or velocity dataset was supplied.</p>
+<p><strong>6 November 2026:</strong> Edited for publication with the revised research plan and the 2 November validation note.</p>
+<section class="references" id="references"><h2>Sources & related documents</h2><ol><li><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab">Aerodynamics Research Lab <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a><span>Rithwik &amp; Rithika Gummadi</span></li><li><a href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab/blob/main/01_wind_tunnel_design/code/src-arduino/testUpdatedProgram/testUpdatedProgram.ino">Arduino environmental and pressure logger <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></li><li><a href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/dynamic-pressure/">Dynamic pressure — NASA Glenn <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></li></ol><p class="small-note">See the <a href="../../PROVENANCE.md">provenance record</a> for source boundaries and attribution.</p></section></article></div><section class="wrap related-section"><h2>Keep following the thread.</h2><article class="note-row" data-filter-item data-category="Research note" data-status="wind-tunnel" data-tags="Research design|Validation|Low-Reynolds number" data-search="a tunnel is not yet an instrument. two conversations shifted the project from building a tunnel to earning the right to interpret it: validate naca 0018 first, then look for a question the literature has not answered. research design validation low-reynolds number research note ## research objective
+
+decide what the wind tunnel is for before asking it for a result. the tunnel is already a useful build. the harder question is whether it can become an instrument that produces evidence another person could inspect and repeat.
+
+the 2 november review brought together two conversations: one with scott, whose research has moved through experimental combustion, computational fluid dynamics, mathematical modeling, dynamics and control, and multi-agent systems; and one with an aerospace researcher at texas a&amp;m. they approached the problem from different directions and arrived at the same boundary between engineering and research.
+
+## what changed
+
+a working tunnel is not automatically a validated scientific instrument. rebuilding a familiar naca result can be excellent training, but the result is not automatically a contribution.
+
+scott&#39;s test was direct: read the literature, identify an unresolved question, and design the measurement around it. the texas a&amp;m researcher made the same distinction experimentally: first show that the apparatus can reproduce published lift and drag behavior at a comparable reynolds number. only then use the apparatus to probe something less characterized.
+
+that reorders the project:
+
+1. establish what the tunnel actually produces.
+2. reproduce a known baseline.
+3. choose a question that survives a focused literature review.
+4. attempt the original experiment.
+
+the interviews did not supply a research question that is already known to be novel. they supplied a procedure for deciding whether one is worth pursuing.
+
+## what the conversations agreed on
+
+| guidance | consequence for this project |
+| --- | --- |
+| a familiar result is not automatically new. | the naca 0018 comparison is validation, not the final paper. |
+| a research contribution needs a literature-defined gap. | no novelty claim until comparable sources have been read and recorded. |
+| low-reynolds-number measurements are sensitive and hard to reproduce. | agreement with a suitable reference would itself be a meaningful result. |
+| lift and drag need distinct, properly arranged force measurements. | a single ambiguous force channel is not enough for coefficient curves. |
+| advanced optics are not the first step. | piv is not feasible here; the first task is credible velocity and force measurement. |
+| the mechanism matters more than the software stack. | each measurement should connect to an aerodynamic quantity, an assumption, and an uncertainty. |
+
+the texas a&amp;m researcher also described particle image velocimetry as an advanced method well beyond the present budget. that was not a reason to avoid measurement. it was a reminder that even an expensive technique depends on experiment design, calibration, data handling, and an answerable question.
+
+## the validation target
+
+the working airfoil choice is naca 0018. the proposed sequence is to hold angle of attack fixed, record the actual flow speed and ambient conditions, and compute lift and drag coefficients using documented reference dimensions. the results would then be compared with published data at the closest achievable reynolds number and test geometry.
+
+the comparison is not a formality. the eventual report would need to explain differences caused by flow non-uniformity, finite-span and end effects, blockage, mounting interference, force-system cross-talk, alignment, surface condition, or measurement noise. a disagreement could be more informative than a tidy curve if the cause is investigated honestly.
+
+several inputs are still missing. the test-section size has been described verbally as “8 by 8,” but the units and actual dimensions are unconfirmed. an approximate reynolds-number range of 50,000 to 100,000 has been discussed, but it is based on fan specifications and informal estimates. it is not a measured operating range. the fan setting does not establish the velocity in the assembled test section; the velocity has to be measured.
+
+## the literature problem
+
+scott cautioned that conventional two-dimensional naca behavior has been studied extensively. he suggested looking beyond a repetition of that result toward finite-wing and three-dimensional effects, moving or morphing geometry, transient forces, or applications such as quieter propellers and rotors. those were brainstorming directions, not verified gaps.
+
+the texas a&amp;m conversation added rapid changes in angle of attack as a candidate: the force during motion can differ from the force at the same angle held steady, and the rate of motion may itself be a variable. reverse-flow airfoil behavior, motivated by advancing and retreating rotor-blade conditions, was offered as another possible direction. again, neither suggestion came with a literature review.
+
+that leaves a clear task before any novel experiment: find out what has already been measured, under which conditions, and with what uncertainty. a direction becomes a research question only after that work.
+
+## the provisional question
+
+the plan now points toward a question that combines the interviews but remains unproven:
+
+&gt; at a measured low reynolds number, how does the rate of change of angle of attack alter the time-dependent lift response of a finite naca 0018 wing relative to fixed-angle baselines?
+
+this is a candidate, not a final hypothesis. it is only credible if the apparatus can resolve the expected signal. force-sensor bandwidth, dynamic mount stiffness, actuation, sampling, calibration, and synchronization all have to be tested first. if they cannot separate an aerodynamic response from mechanical vibration, a static finite-span or measurement-method study may be the more honest investigation.
+
+## what this note establishes
+
+the project now has two tracks that must not be confused:
+
+- **validation:** can the apparatus reproduce a known naca 0018 result under documented conditions?
+- **contribution:** after the literature review, is there a specific unanswered question this apparatus can address?
+
+the first track is executable now. the second remains a decision, not a promise. a peer-reviewed publication is an aspiration, not a guaranteed deliverable.
+
+## next steps
+
+- measure the tunnel and test-section geometry, and record the units.
+- find published naca 0018 data at the closest achievable reynolds number, aspect ratio, surface condition, and test method. read each source before citing it.
+- document lift and drag as separate force channels with a calibration and alignment plan.
+- write the fixed-angle baseline protocol before running the first coefficient sweep.
+- review the dynamic-pitch literature and the apparatus requirements separately. do not let one substitute for the other.
+
+## revision record
+
+**2 november 2026:** created from the first research-planning conversations. no measurements, coefficients, or novelty claims were added.
+
+**6 november 2026:** edited for publication alongside the revised research plan and the 5 november instrumentation note.
+"><div class="note-date"><span class="mono">N° 006</span><time datetime="2026-11-02">02 Nov 2026</time></div><div class="note-main"><div class="card-meta"><span>Research note</span><span>Aerodynamics</span></div><h2><a href="../../notebook/a-tunnel-is-not-yet-an-instrument/">A tunnel is not yet an instrument.</a></h2><p>Two conversations shifted the project from building a tunnel to earning the right to interpret it: validate NACA 0018 first, then look for a question the literature has not answered.</p><div class="tags"><span>Research design</span><span>Validation</span><span>Low-Reynolds number</span></div></div><a class="row-arrow" href="../../notebook/a-tunnel-is-not-yet-an-instrument/" aria-label="Read A tunnel is not yet an instrument."><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a></article><article class="note-row" data-filter-item data-category="Research note" data-status="wind-tunnel" data-tags="Instrumentation|Uncertainty" data-search="before the plot, calibrate the measurement. what remains to be established before a corrected sensor value can support an aerodynamic claim. instrumentation uncertainty research note ## research objective
+
+separate a useful plot from a defensible measurement. the current stand needs a way to connect sensor readings to known reference values before those readings can support force measurements.
+
+## background research
+
+the earlier correction prototype contains default offsets. subtracting an offset changes a number; a reference comparison is needed to justify the correction. the arduino source also includes a modeled pressure channel with simulated noise and conditioning.
+
+## proposed method
+
+this is a planning note. document a reference, collect repeat readings at known conditions, record zero behavior and drift, then evaluate how the response changes across the intended range. keep the raw observations alongside any fit or correction.
+
+## technical context
+
+for a flow with density $\rho$ and speed $v$, dynamic pressure is:
+
+$$q = \frac{1}{2}\rho v^2$$
+
+if a suitable measurement establishes dynamic pressure, the corresponding relation is:
+
+$$v = \sqrt{\frac{2q}{\rho}}$$
+
+these are general relations, not results from this tunnel. applying them requires an appropriate pressure arrangement, density assumptions, and a calibrated measurement. a generic differential-pressure sensor reading is not automatically dynamic pressure.
+
+## data and observations
+
+no reference-calibration dataset has been supplied. no coefficients, fit quality, or uncertainty values are asserted here.
+
+## what could go wrong
+
+mounting interference, zero drift, cross-axis sensitivity, incorrect units, or treating a modeled input as a physical reading could all undermine an interpretation. these are proposed checks, not observed failures of this stand.
+
+## what this note establishes
+
+the question is not whether software can draw a smooth line. it is whether the value on that line can be traced to a documented measurement process.
+
+## next steps
+
+choose and document reference checks for each channel once the stand geometry is settled. record assumptions and uncertainty before reporting aerodynamic conclusions.
+"><div class="note-date"><span class="mono">N° 004</span><time datetime="2026-10-13">13 Oct 2026</time></div><div class="note-main"><div class="card-meta"><span>Research note</span><span>Aerodynamics</span></div><h2><a href="../../notebook/calibration-before-conclusions/">Before the plot, calibrate the measurement.</a></h2><p>What remains to be established before a corrected sensor value can support an aerodynamic claim.</p><div class="tags"><span>Instrumentation</span><span>Uncertainty</span></div></div><a class="row-arrow" href="../../notebook/calibration-before-conclusions/" aria-label="Read Before the plot, calibrate the measurement."><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a></article></section></main>
+<footer class="footer"><div class="wrap"><div class="footer-top"><a class="footer-title" href="../../index.html">Keep asking.<br><em>Keep building.</em></a><div><p>A fieldbook by<br><strong>Rithwik & Rithika Gummadi.</strong></p><p>Questions, experiments, and the work in between.</p><a class="text-link" href="https://github.com/aeriswghs-ux/Aerodynamics-Research-Lab">Explore the research repository <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div></div><div class="footer-bottom"><span>AeroAspirant · An open record of work in progress</span><a href="../../research-record.html">Original research record</a><a href="../../PROVENANCE.md">Sources & media credits</a><a href="#top">Back to top</a></div></div></footer></body></html>

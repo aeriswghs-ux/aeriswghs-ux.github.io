@@ -10,7 +10,9 @@ import {
 import { projects } from "../../content/projects.ts";
 import { notebook } from "../../content/notebook.ts";
 import { research } from "../../content/research.ts";
+import { researchPlan } from "../../content/research-plan.ts";
 import { explorations } from "../../content/explorations.ts";
+import { futurePlanSection } from "../components/plan.ts";
 import { esc, icon, date } from "../render.ts";
 const unique = (a: string[]) => [...new Set(a)];
 export function projectIndex(root: string): string {
@@ -32,24 +34,24 @@ export function notebookIndex(root: string): string {
     root,
     body: `${pageHead(
       "The open notebook.",
-      "A place for the process: what changed, what is known, what went wrong, and what to try next.",
-      `${notebook.length} entries · Updated ${date(
+      "Interview syntheses, build notes, source reviews, and the questions that changed the plan.",
+      `${notebook.length} entries · ${date(
         notebook
           .map((n) => n.updated)
           .sort()
           .at(-1)!,
       )}`,
-    )}<section class="wrap collection notebook-collection" data-collection>${filterBar({ label: "notebook", categories: ["Research note", "Experiment", "Design decision", "Simulation", "Build log", "Literature review", "Reflection"], statuses: projects.map((p) => ({ value: p.id, label: p.category })), tags: unique(notebook.flatMap((n) => n.tags)).sort() })}<div class="notebook-layout"><aside class="notebook-aside"><h2>Notes from the bench.</h2><p>This first collection brings the existing source record and owner’s build updates into one readable place.</p><p>Each entry identifies its origin. Transcriptions and planning notes are clearly labeled.</p><a href="${root}AUTHORING.md">How this notebook is maintained ${icon("external")}</a></aside><div><div class="entry-list">${notebook.map((n) => noteRow(n, root)).join("")}</div>${emptyState}</div></div></section>`,
+    )}<section class="wrap collection notebook-collection" data-collection>${filterBar({ label: "notebook", categories: ["Research note", "Experiment", "Design decision", "Simulation", "Build log", "Literature review", "Reflection"], statuses: projects.map((p) => ({ value: p.id, label: p.category })), tags: unique(notebook.flatMap((n) => n.tags)).sort() })}<div class="notebook-layout"><aside class="notebook-aside"><h2>Notes from the bench.</h2><p>The newest entries synthesize four researcher conversations from 2 and 5 November. They are marked as paraphrased guidance, not measured results.</p><p>Older entries preserve the build record and its unresolved calibration work. Together they show why the next experiment is characterization, not another demonstration.</p><a href="${root}research/#future-plans">See what the interviews changed ${icon("arrow")}</a></aside><div><div class="entry-list">${notebook.map((n) => noteRow(n, root)).join("")}</div>${emptyState}</div></div></section>`,
   });
 }
 export function researchIndex(root: string): string {
   return layout({
     title: "Research",
     description:
-      "An archive of research questions, draft methodologies, and planned investigations with explicit evidence boundaries.",
+      "A living research plan, draft methodologies, and validation work with explicit evidence boundaries.",
     active: "Research",
     root,
-    body: `${pageHead("The research record.", "Questions, methods, and the evidence needed to support a conclusion. An archive built for careful reading.", "Formal archive")}<div class="wrap research-disclosure"><p><strong>Open work, clearly labeled.</strong> These records are drafts and planned investigations. No peer review, publication, completed study, or downloadable paper is implied.</p></div><section class="wrap collection" data-collection>${filterBar({ label: "research", categories: unique(research.map((r) => r.kind)), statuses: ["Draft", "In progress", "Under review", "Completed"].map((s) => ({ value: s, label: s })) })}<div class="research-list">${research.map((r) => researchRow(r, root)).join("")}</div>${emptyState}</section>`,
+    body: `${pageHead("The research record.", "A living plan for turning an assembled wind tunnel into a validated instrument — and a clear line between what has been measured and what is still proposed.", `Future plans · ${date(researchPlan.updated)}`)}<div class="wrap research-disclosure"><p><strong>Open work, clearly labeled.</strong> The plan below is a research design, not a result. No peer review, publication, completed study, or validated aerodynamic measurement is implied.</p></div>${futurePlanSection(root)}<div class="wrap archive-head"><div><p class="mono">Formal records</p><h2>Research archive</h2></div><p>Draft methodologies, validation plans, and proposed investigations. Status describes evidence, not ambition.</p></div><section class="wrap collection" data-collection>${filterBar({ label: "research", categories: unique(research.map((r) => r.kind)), statuses: ["Draft", "In progress", "Under review", "Completed"].map((s) => ({ value: s, label: s })) })}<div class="research-list">${research.map((r) => researchRow(r, root)).join("")}</div>${emptyState}</section>`,
   });
 }
 export function explorationsIndex(root: string): string {
@@ -59,7 +61,6 @@ export function explorationsIndex(root: string): string {
       "A curated visual collection connecting aerospace photographs, source artifacts, and engineering questions. Every image includes provenance and educational context.",
     active: "Explorations",
     root,
-    dark: true,
     body: `${pageHead("An invitation to wonder.", "A visual fieldbook of things worth looking at more closely. Follow an image into the science, the source, and the next question.", `${explorations.length} collected ideas`)}<section class="wrap collection" data-collection>${filterBar({ label: "explorations", categories: unique(explorations.map((e) => e.collection)) })}<div class="masonry">${explorations.map((e) => explorationCard(e, root)).join("")}</div>${emptyState}</section><div class="wrap collection-credit"><p>Public scientific archives alongside our own source artifacts. NASA imagery provides educational context; it does not depict our projects or imply endorsement.</p><a href="${root}PROVENANCE.md">View media provenance ${icon("external")}</a></div>`,
   });
 }

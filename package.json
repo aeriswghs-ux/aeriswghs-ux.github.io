@@ -7,7 +7,7 @@
     "build": "tsx scripts/build.ts",
     "dev": "tsx scripts/serve.ts",
     "typecheck": "tsc --noEmit",
-    "lint": "node --check script.js && node --check cubesat.js && tsx scripts/check.ts",
+    "lint": "node --check script.js && node --check cubesat.js && node --check lab.js && tsx scripts/check.ts",
     "test": "tsx --test tests/*.test.ts",
     "check": "npm run typecheck && npm run build && npm run lint && npm test",
     "dev:studio": "npm run build && vite"
@@ -17,6 +17,7 @@
     "@types/katex": "^0.16.7",
     "@types/markdown-it": "^14.1.2",
     "@types/node": "^24.0.0",
+    "animejs": "^4.5.0",
     "axe-core": "^4.14.0",
     "katex": "^0.19.0",
     "markdown-it": "^14.1.0",

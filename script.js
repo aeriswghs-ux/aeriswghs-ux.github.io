@@ -65,6 +65,20 @@ if (menuButton && primaryNav) {
       menuButton.focus();
     }
   });
+  primaryNav.addEventListener("click", (event) => {
+    if (event.target.closest("a")) closeMenu();
+  });
+  document.addEventListener("pointerdown", (event) => {
+    if (!primaryNav.contains(event.target) && !menuButton.contains(event.target)) {
+      closeMenu();
+    }
+  });
+  document.addEventListener("focusin", (event) => {
+    if (!primaryNav.contains(event.target) && !menuButton.contains(event.target)) {
+      closeMenu();
+    }
+  });
+  window.matchMedia("(min-width: 901px)").addEventListener("change", closeMenu);
 }
 
 // Collection filters share one semantic, URL-addressable implementation.

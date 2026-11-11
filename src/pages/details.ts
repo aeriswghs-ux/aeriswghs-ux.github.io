@@ -97,12 +97,13 @@ export function researchDetail(r: ResearchPaper, root: string): string {
     { id: "findings", title: "Findings", body: r.findings },
     { id: "limitations", title: "Limitations", body: r.limitations },
   ];
+  const sections = r.sections ?? [];
   return layout({
     title: r.title,
     description: r.abstract,
     root,
     active: "Research",
-    body: `${breadcrumb(root, "Research", r.kind)}<header class="detail-head wrap"><div class="detail-meta"><span>${r.kind}</span>${status(r.status)}<time datetime="${r.date}">${date(r.date)}</time></div><h1>${esc(r.title)}</h1><p class="research-byline">${r.authors.map(esc).join(" & ")}</p></header><div class="wrap reading-layout">${toc([...parts, { id: "references", title: "References" }])}<article class="prose"><p class="entry-provenance">Working archive record. Not a peer-reviewed publication. <a href="${root}projects/${r.project}/">Associated project ${icon("arrow")}</a></p>${parts.map((s) => `<section id="${s.id}"><h2>${s.title}</h2><p>${esc(s.body)}</p></section>`).join("")}<section><h2>Documents & code</h2>${r.pdf ? `<a class="button" href="${root}${r.pdf}" download>Download paper ${icon("download")}</a>` : '<p class="small-note">A research paper PDF has not been supplied. This HTML record is available to read and print.</p>'}${r.code ? `<a class="text-link" href="${references.find((ref) => ref.id === r.code)!.url}">Inspect related source code ${icon("external")}</a>` : ""}${r.citation ? `<p class="citation">${esc(r.citation)}</p>` : ""}<button class="quiet-button print-button" data-print hidden>Print this record ${icon("download")}</button></section>${referencesList(r.references, root)}</article></div>`,
+    body: `${breadcrumb(root, "Research", r.kind)}<header class="detail-head wrap"><div class="detail-meta"><span>${r.kind}</span>${status(r.status)}<time datetime="${r.date}">${date(r.date)}</time></div><h1>${esc(r.title)}</h1><p class="research-byline">${r.authors.map(esc).join(" & ")}</p></header><div class="wrap reading-layout">${toc([...parts, ...sections, { id: "references", title: "References" }])}<article class="prose"><p class="entry-provenance">Working archive record. Not a peer-reviewed publication. <a href="${root}projects/${r.project}/">Associated project ${icon("arrow")}</a></p>${parts.map((s) => `<section id="${s.id}"><h2>${esc(s.title)}</h2>${markdown(s.body)}</section>`).join("")}${sections.map((s) => `<section id="${s.id}"><h2>${esc(s.title)}</h2>${markdown(s.body)}</section>`).join("")}<section><h2>Documents & code</h2>${r.pdf ? `<a class="button" href="${root}${r.pdf}" download>Download paper ${icon("download")}</a>` : '<p class="small-note">A research paper PDF has not been supplied. This HTML record is available to read and print.</p>'}${r.code ? `<a class="text-link" href="${references.find((ref) => ref.id === r.code)!.url}">Inspect related source code ${icon("external")}</a>` : ""}${r.citation ? `<p class="citation">${esc(r.citation)}</p>` : ""}<button class="quiet-button print-button" data-print hidden>Print this record ${icon("download")}</button></section>${referencesList(r.references, root)}</article></div>`,
   });
 }
 export function explorationDetail(e: Exploration, root: string): string {
@@ -112,7 +113,6 @@ export function explorationDetail(e: Exploration, root: string): string {
     description: e.summary,
     root,
     active: "Explorations",
-    dark: true,
     body: `${breadcrumb(root, "Explorations", e.collection)}<article class="wrap exploration-detail"><div class="exploration-detail-image">${mediaFigure(e.media, root)}</div><div class="exploration-detail-copy"><span class="small-note">${e.collection}</span><h1>${esc(e.title)}</h1><p class="page-dek">${esc(e.summary)}</p><h2>Look a little closer.</h2><p>${esc(e.context)}</p><h2>A question to take with you.</h2><p>${esc(e.interest)}</p><div class="related-links"><a href="${root}projects/${e.relatedProject}/">Follow the related project ${icon("arrow")}</a>${e.relatedEntry ? `<a href="${root}notebook/${e.relatedEntry}/">Read the notebook entry ${icon("book")}</a>` : ""}</div><details class="technical"><summary>Image source & attribution</summary><p>${esc(m.credit)} · ${esc(m.kind)}</p><p>${esc(m.license)}</p><a href="${m.source.startsWith("http") ? m.source : root + m.source}">Original source ${icon("external")}</a></details>${referencesList(e.references, root)}</div></article><div class="wrap collection-credit"><a class="text-link" href="${root}explorations/">Return to the collection ${icon("arrow")}</a></div>`,
   });
 }

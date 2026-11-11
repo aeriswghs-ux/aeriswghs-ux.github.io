@@ -121,7 +121,7 @@ export async function build(): Promise<string[]> {
       summary: r.abstract,
       type: "Research",
       url: `research/${r.id}/`,
-      text: `${r.question} ${r.methodology} ${r.findings} ${r.limitations}`,
+      text: `${r.question} ${r.methodology} ${r.findings} ${r.limitations} ${(r.sections ?? []).map((section) => section.body).join(" ")}`,
     })),
     ...explorations.map((e) => ({
       title: e.title,
@@ -133,6 +133,12 @@ export async function build(): Promise<string[]> {
   ];
   await writeFile("assets/search-index.json", JSON.stringify(index));
   await cp("node_modules/katex/LICENSE", "assets/KATEX-LICENSE.txt");
+  await mkdir("assets/vendor", { recursive: true });
+  await cp(
+    "node_modules/animejs/dist/bundles/anime.esm.min.js",
+    "assets/vendor/anime.esm.min.js",
+  );
+  await cp("node_modules/animejs/LICENSE.md", "assets/vendor/ANIME-LICENSE.md");
   await writeFile(
     "404.html",
     layout({

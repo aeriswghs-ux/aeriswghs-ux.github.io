@@ -45,6 +45,21 @@ export const media: MediaAsset[] = [
     kind: "photograph",
   },
   {
+    id: "sounding-rocket",
+    src: "assets/media/sounding-rocket-1041.webp",
+    width: 1041,
+    height: 694,
+    responsive: true,
+    alt: "A Black Brant IX sounding rocket lifting off from its pad at Wallops Island beneath a bright white exhaust plume.",
+    caption:
+      "Black Brant IX sounding rocket, Wallops Island. Reference imagery, not our vehicle or flight.",
+    credit: "NASA",
+    source:
+      "https://www.nasa.gov/image-detail/dynamo-2-36-357-50k-launch-photos/",
+    license: "NASA educational and informational media usage guidelines",
+    kind: "photograph",
+  },
+  {
     id: "honeycomb",
     src: "assets/honeycomb-toolpath.svg",
     width: 600,

@@ -23,7 +23,7 @@ export const projects: Project[] = [
     media: "honeycomb",
     tools: ["Arduino", "BME280", "HX711 / load cells", "3D printing", "Python"],
     contributors: authors,
-    updated: "2026-10-13",
+    updated: "2026-11-06",
     timeline: timeline([
       [
         "Defined",
@@ -123,7 +123,7 @@ export const projects: Project[] = [
       {
         id: "next",
         title: "Future improvements",
-        body: "Finish the stand model, document how airfoils and model aircraft attach, complete calibration, publish the updated source and original photographs, and collect repeatable measurements with their limitations.",
+        body: "Finish the stand and measurement chain, characterize the empty tunnel, and reproduce a NACA 0018 baseline before selecting a novel question. The [guided research plan](../../research/guided-aerodynamics-plan/) records the current stage gates, decision rules, and the evidence required before a dynamic experiment. The updated source and original photographs remain to be published.",
       },
     ],
     references: [

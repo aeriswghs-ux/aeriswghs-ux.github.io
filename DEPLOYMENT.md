@@ -1,39 +1,35 @@
-# AeroAspirant — repository-ready portfolio
+# Static GitHub Pages deployment
 
-Semantic HTML, external CSS, and vanilla JavaScript. No build step, backend, package install, or external font service. Optional CubeSat inspection loads A-Frame 1.8.0 from its CDN; essential content does not depend on WebGL.
+The site remains a static website. TypeScript, Markdown parsing, and mathematical rendering run during authoring, not on the server. Generated HTML, CSS, browser JavaScript, images, fonts, and JSON are published from the repository root.
 
-## Preview
+## Existing repository
 
-Open `index.html` directly, or serve this folder with any static web server. All site assets use relative paths.
+The current repository is `aeriswghs-ux/aeriswghs-ux.github.io`. Its existing publishing configuration uses the root of `main`. This implementation does not change GitHub settings, push commits, publish, or change domain assignments.
 
-## Recommended integration with the research repository
+1. Run `npm ci` and `npm run check`.
+2. Commit source **and generated files**: root HTML, section directories, `assets/`, CSS/JavaScript, `.nojekyll`, sitemap, robots file, and documentation.
+3. Use the repository's normal commit/push/review process. GitHub Pages serves the generated files directly, without a Node server or SPA fallback.
+4. After publication, verify the homepage, a nested notebook URL, a dataset download, and the optional CubeSat viewer.
 
-1. Copy the contents of this folder into a new `docs/` directory in `aeriswghs-ux/Aerodynamics-Research-Lab`. Preserve the existing research folders, root README, and license.
-2. Commit all supplied HTML, CSS, JavaScript, `.nojekyll`, the complete `assets/` folder, and these documentation files.
-3. In GitHub Pages settings, select the publishing branch and `/docs` folder.
-4. After publishing, verify the public page and asset URLs. The relative asset paths support both repository subpaths and custom-domain root hosting.
+`node_modules/`, `.qa/`, generated design drafts, unused local KaTeX distribution files, and downloaded original NASA JPEG working files are ignored. Optimized WebP variants, licenses, and provenance are committed. Build dependencies are development-only and are never requested by a visitor.
 
-For an existing dedicated website repository, place the same files at its publishing root. Preserve any existing `CNAME` only if its domain assignment is intentional. This package does not change domain settings or publish automatically.
+## Canonical URL and subpaths
 
-## Files
+By default, canonical metadata and the sitemap use `https://aeriswghs-ux.github.io/`. To deploy to another root or a repository subpath, set the complete site URL before building:
 
-- `index.html`: complete, readable content and navigation.
-- `styles.css`: global design tokens, layout, responsive rules, focus, print, and reduced-motion handling.
-- `fonts.css`: local font declarations with `font-display: swap`.
-- `script.js`: artifact tabs, a brief nonblocking headline entrance, and optional 3D loading. Without JavaScript, all evidence remains visible. Reduced-motion preferences disable the motion.
-- `cubesat-viewer.html`, `cubesat.css`, `cubesat.js`: isolated, on-demand A-Frame concept with rotation buttons and static fallback. This is an illustration, not a flight simulator or engineering model.
-- `assets/`: genuine repository-derived evidence, brand favicon, fonts, and licenses.
-- `PROVENANCE.md`: claim mapping and asset origins.
-- `AUDIT.md`: verified checks, repair record, and remaining limitations.
+```powershell
+$env:SITE_URL = 'https://example.github.io/lab/'
+npm run check
+```
 
-## Editing
+All normal page links and assets are relative. `SITE_URL` additionally configures canonical URLs, the sitemap, robots entry, and absolute recovery paths in `404.html`. Do not put API credentials or secrets in this variable. Preserve an existing `CNAME` only when its domain assignment is intentional; this repository currently has no `CNAME`.
 
-Edit factual copy and source links in HTML. Change global visual values in `:root` in `styles.css`. To add an artifact, provide an accessible image alternative, a caption distinguishing simulation/design/measurement, and a working source link. Keep all related tab/panel IDs unique.
+## Local preview
 
-The sample data is an example fixture, not measured aerodynamic performance. The original Flask analysis tool remains a linked research artifact; it does not run on GitHub Pages.
+`npm run dev` builds once and serves the root at `http://localhost:4173`. Content edits require `npm run build` and browser refresh. It returns a real 404 for unknown paths. A plain static server is also sufficient.
 
-No analytics, cookies, contact-form service, or invented contact details are included. The repository is the current public route to the research record.
+## External services
 
-## Current website repository
+Primary content works without external requests. Only the optional CubeSat viewer requests A-Frame 1.8.0 from its existing CDN. A static illustration and explanatory text remain if WebGL or the CDN fails. GitHub sources, scientific references, and NASA credit links open their external destinations only when followed.
 
-The site lives at `aeriswghs-ux/aeriswghs-ux.github.io`, with `main` as the publishing branch. Development-only generated concepts, direction briefs, and inspector output are excluded by `.gitignore`.
+The Flask data-correction prototype is linked as a research artifact; it is not deployed on GitHub Pages. There is no contact-form service, authentication, analytics, or client-side secret.

@@ -1,7 +1,9 @@
 .impeccable/*
 !.impeccable/design.json
 .taste-skill/
-
 node_modules/
+.qa/
+assets/media/*-original.jpg
+assets/katex/
 .env.local
 .env.*.local

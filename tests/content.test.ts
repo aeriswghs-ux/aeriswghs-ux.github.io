@@ -83,11 +83,44 @@ test("global search includes full notebook text, not only titles", () => {
       r.url === "notebook/calibration-before-conclusions/",
   );
   assert.ok(note.text.includes("cross-axis sensitivity"));
-  assert.equal(index.length, 19);
+  assert.equal(index.length, 22);
+});
+test("future plan surfaces the 2 and 5 November interviews without claiming results", () => {
+  const plan = readFileSync("research/index.html", "utf8");
+  assert.match(plan, /Future plans/);
+  assert.match(plan, /02 Nov 2026/);
+  assert.match(plan, /05 Nov 2026/);
+  assert.match(plan, /Provisional research question/);
+  assert.match(plan, /What would stop the plan/);
+  const detail = readFileSync(
+    "research/guided-aerodynamics-plan/index.html",
+    "utf8",
+  );
+  assert.match(detail, /No measured findings/);
+  assert.match(detail, /Stage gates and exit evidence/);
+  const entry = readFileSync(
+    "notebook/a-tunnel-is-not-yet-an-instrument/index.html",
+    "utf8",
+  );
+  assert.match(entry, /not a final hypothesis/i);
+  assert.match(entry, /No measurements, coefficients, or novelty claims/i);
 });
 test("nested pages link correctly from repository subpaths", () => {
   assert.equal(rootFor("projects/wind-tunnel/index.html"), "../../");
   const html = readFileSync("projects/wind-tunnel/index.html", "utf8");
   assert.match(html, /href="\.\.\/\.\.\/notebook\//);
   assert.doesNotMatch(html, /(?:src|href)="\/assets/);
+});
+test("apparatus bench tabs and panels stay wired", () => {
+  const html = readFileSync("index.html", "utf8");
+  const keys = ["cubesat", "wind", "rocket"];
+  assert.deepEqual(
+    [...html.matchAll(/data-lab-tab="([^"]+)"/g)].map((m) => m[1]),
+    keys,
+  );
+  for (const key of keys) {
+    assert.match(html, new RegExp(`aria-controls="lab-panel-${key}"`));
+    assert.match(html, new RegExp(`data-lab-panel="${key}"`));
+  }
+  assert.equal((html.match(/class="lab-plate-img"/g) || []).length, 3);
 });
